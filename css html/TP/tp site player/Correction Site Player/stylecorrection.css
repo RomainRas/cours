@@ -1,0 +1,105 @@
+/** fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/** reset */
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+body{
+    font-size: 1.6rem; /** = 16px **/
+    font-family: 'Roboto', sans-serif;
+    line-height:1.3333 ;
+    /* background-color: #f00; */
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/*** global **/
+main{
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg_accueil.png') center center no-repeat fixed;
+    background-size:cover;
+    padding:0 4.16666666%;
+}
+main>header{
+    width: 100%;
+    height: 90px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main>header h1{
+    color: #fff;
+    width: 150px;
+    font-size: 2.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+.container-menu{
+    display: flex;
+    align-items: center;
+    /**  flex-direction: row; direction par défaut (en ligne) **/
+}
+.container-menu button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    background:none;
+    cursor: pointer;
+}
+.container-menu button:first-child{
+    background: url('../img/btn_playlist.png') center center no-repeat;
+    background-size: 60% auto;
+}
+.search-song{
+    display: flex;
+    align-items: center;
+}
+.search-song input{
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius:3px;
+    box-shadow:inset 0 0 5px 0 rgba(0, 0 , 0, 0.5);
+    /** inset = ombre interieur, 0 = x, 0=y, 5px = bleur , 0 = spread (écartemet de l'ombre) en fin la couleur */
+    opacity: 0;
+    width: 0;
+    transition: all 300ms ease-in-out;
+}
+.search-song:hover input{
+    opacity: 1;
+    width: 200px;
+}
+.search-song button{
+    background: url('../img/btn_search.svg') center center no-repeat;
+    background-size: 60% auto;
+}
+.container-menu button:nth-child(3){
+    /* permet de selectioner precisement un element dans un ensemble */
+    background: url('../img/btn_genre.png') center center no-repeat;
+    background-size: 60% auto;
+}
+
+
+/*** menu global ***/
+.menu-global-panel{
+    display: fixed;
+}
+
+

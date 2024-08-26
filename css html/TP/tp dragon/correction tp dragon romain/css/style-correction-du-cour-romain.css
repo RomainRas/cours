@@ -1,0 +1,284 @@
+
+        /*? [!important]: */
+        /*div.btn-content{
+        /*background-color: #f00 !important;
+        /* permet de donner la priorité absolu sur un style css */
+        /*? Sinon : */
+        /* id = 100pts, class = 50pts, balise = 20pts 
+        valeur en "poid" d'un style css ( plus de poid = plus d'importance dans le  
+        traitement de l'information */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Source+Sans+Pro:ital@0;1&display=swap');
+
+/*! RESET DE STYLE !*/
+/*! RESET DE STYLE !*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none; 
+    box-sizing: border-box;
+        /*?box-sizing, border-box; */
+        /*permet de forcer le navigateur à calculer les padding et les border
+        dans la forme de la boite ( tout ce qui est en display:block ou flex est une boite a l'inverse display:inline*/
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+        /*?font-size: 62.5%(html) + 1.6rem(body) *?/
+        /*Conversion qui permet de faire 1.6rem = 16px */
+        /*16px = resolution par defaut de caractere navigateur */
+    line-height: 1.333;
+        /*la valeur est une proportion en rapport avec la hauter de caractere
+        ici un plus un tiere de caractere pour la hauteur de ligne */
+    font-family:'Gupter', sans-serif;
+        /*?font-family: Family des blocs de textes generaux, famille de secour */
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+}
+
+/*! STYLE GLOBAL */
+/*! STYLE GLOBAL */
+body{
+    background: url('../assets/bg_paper.png');
+        /*background-color: #000;
+          background-image: url('ficher');
+          background-position: center center; ( axehorizontale axeverticale )
+          background-repeat: no-repeat;
+          background-attachment: fixed; */
+}
+button{
+    cursor: pointer;
+}
+h1,h2,h3{
+    font-family:'Nunito', sans-serif;
+}
+input,textarea,button,select{
+    font-family: 'Gupter', sans-serif;
+    font-size: 1.6rem;
+}
+main{
+    height: 100%;
+    width: 100%;
+}
+.page{
+    height: 100%;
+    border: 1px solid #ff0000;
+    display: flex;
+}
+.inter-page{
+    height: 60%;
+    border: 1px solid #1fa80d;
+    display: flex;
+}
+div,h1,h2,h3{
+    z-index: 4;
+}
+
+/*! TEXTE POUR LES SECTIONS */
+/*! TEXTE POUR LES SECTIONS */
+.page:first-child, .page:nth-child(3){
+    color: #fff;
+}
+.page h2:not(.inter-page h2){
+        /*?la pseudo class :not
+        /*exemple au dessus: selectionne tous les ".page h2" a l'exception des 
+        " .inter-page h2" */
+    font-size: 8.5rem;
+    line-height: 1.1;
+}
+.page{
+    font-size: 2rem;
+}
+.page h3{
+    font-size: 4rem;    
+    line-height: 1.1;
+}
+
+/*! BACKGROUND */
+/*! BACKGROUND */
+.page:first-child{
+        /*?.page:first-child(2); .page:first-child(2) */
+        /* */
+    background: url('../assets/paysage.jpg') right top no-repeat;
+        /*background-image:url('../assets/paysage.jpg');
+          background-position: right top;
+          background-repeat: no-repeat;
+          background-color: #080808; */
+    background-size: auto 80%;
+        /* Ordre des dimension : x(honrizontale)= auto, y(vertical)=80% */
+        /* auto permet d'adapter l'image en fonction des 80% par exemple */
+        /* Sinon il existe des proprieté tel que cover c'est un auto auto en quelque sorte */
+    background-color: #080808;
+    color: #ffffff;
+}
+.page:first-child,
+.page:nth-child(3){
+    color: #fff;
+}
+.page:nth-child(3){
+    background:#000 url('../assets/dragon-noir.jpg') center center no-repeat;
+    background-size: cover;
+}
+/*! MISE EN PAGE GLOBAL DES ARTICLES */
+/*! MISE EN PAGE GLOBAL DES ARTICLES */
+.page article, .inter-page article{
+    width: 50%;
+    height: 100%;
+    padding: 7% 10%;
+        /* Si 2 valeurs top/bottom puis left right */
+        /* Si 4 valeurs top puis right puis bottom puis left */
+        /* Si 1 valeurs top/right/bottom/left ensemble */
+        /*?padding = marge intern à l'element */
+    display: flex;
+        /*?display: flex; donne par defaut le flux de gauche a droite ( row ) */
+    flex-direction: column;
+        /*?flex-direction: change la direction du flux ( column; le créer de haut en bas, column reverse de bas en haut ) */
+    justify-content:space-between;
+        /*?justify-content = repartition du contenu selon le flux de la boite */
+        /*?space-between = créer un espace équivalent etre tous */
+        /*?content c'est les blocs dans le parents ( justify content est géré a partir du contenant global qui est en display flex) il repartie les element pas raport à la place global
+        /*?items c'est ce qu'il y a dans les blocs ( align item est geré a partir l'élement contenue dans le bloc qui se trouve dans le parent )  il demande aux items de s'aligner entr eux*/
+}
+/*! difference entre content et item ? */
+
+/*! GESTION DES INTER-PAGE */
+/*! GESTION DES INTER-PAGE */
+.inter-page{
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}   
+
+/*! DRAGON VERT */
+/* Image dragon vert */
+.inter-page picture{
+    position: absolute;
+    left: 40%;
+}
+.inter-page:nth-child(2) picture{
+        /* display: none; */
+        /*?display:none, nous permet de cacher l'image pour travailler sur le reste */
+    width: 20%;
+    position: absolute;
+        /*?position: absolute car la section est en relative
+        /*l'image va donc faire 20% de la taille de la section (son parent direct grace à relative ) et etre placé à 41% a gauche début de la section et a 6% du
+        */
+    left: 41%;
+    bottom: 6%;
+    z-index: 1;
+        /* le z-index permet d'avoir un effet de calque: plus l'index est élevé plus 
+        l'objet est  au dessus des autre */
+    transform: rotateZ(-1.5deg);
+}
+.inter-page:nth-child(2) picture img{
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+.picture-border{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    top: 15px;
+    right: 15px;
+    z-index: 3;
+}
+.picture-bg{
+    position:absolute;
+        /* utilisation de la position absolut pour placer la boite deriere
+        l'image grace au z-index, et décaler en négatif top et droite.
+        sans gener l'image et la bordure */
+    width: 100%;
+    height: 100%;
+    top:-15px;
+    right:-15px;
+    z-index: 1;
+    background-color: #fff;
+    opacity: 0.5;
+}
+/* Articles */
+.inter-page article:last-child{
+    text-align: right;
+}
+.inter-page article:last-child .btn-content{
+    justify-content: end;
+}
+.page:nth-child(2){
+    background-color:rgba(95, 148, 136,0.5);
+}
+.inter-page:nth-child(2) article a{
+    background-color: #152020;
+    color: #517a62;
+}
+
+
+/*! BOUTON */
+/*! BOUTON */
+.btn-content{
+    display: flex;
+}
+.page article a{
+    background-color: #fff;
+    color: #080808;
+    display: block;
+        /* a est un display inline, il faut donc lui donner une taille avec display:block */
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;
+}
+
+/*! BOUTON */
+/*! BOUTON */
+.test{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    margin-left: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.test div{
+    opacity: 0.5;
+    background-color: #000;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    font-size: 8rem;
+    z-index: 3;
+}
+.test:hover div{
+    opacity: 0;
+}
+.test img{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0.5;
+    transition: all 400ms ease;
+    transform: translate(-50%,-50%);
+}
+.test:hover img{
+    width: 120%;
+    opacity: 1;
+}

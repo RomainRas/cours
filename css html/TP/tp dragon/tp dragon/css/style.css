@@ -1,0 +1,340 @@
+/** importation font **/
+@import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/** reset **/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing:border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Gupter', sans-serif;
+    line-height: 1.333;
+
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*! GLOBAL */
+.page{
+    height: 100%;
+    display: flex;
+    position: relative;
+    
+}
+.demi-page{
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+body{
+    background: url('../assets/bg_paper.png');
+    color: #333;
+}
+main{
+    height: 100%;
+}
+section{
+    height: 100%;
+    display: flex;
+}
+h1,h2{
+    font-family:"Nunito", sans-serif;
+}
+.page article h1, .page article h2{
+    font-size: 8.5rem;
+    line-height: 1.1;
+}
+.page:first-child article h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+.demi-page article h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+section article .content {
+    font-size: 2rem;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+p{
+    display: block;
+}
+/*! POSITIONEMENT DES ARTICLES */
+.gauche{
+    width: 50%;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.droite{
+    width: 50%;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+/*! BOUTONS */
+.btn-content{
+    display: flex;
+}
+.page article a,.demi-page article a{
+    background-color: #fff;
+    color: #080808;
+    display: block;
+        /* a est un display inline, il faut donc lui donner une taille avec display:block */
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem; 
+}
+
+/*! CADRE DES IMAGES */
+.picture-border{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 15px;
+    right: 15px;
+    z-index: 3;
+}
+.picture-bg{
+    position:absolute;
+        /* utilisation de la position absolut pour placer la boite deriere*/
+        /*l'image grace au z-index, et décaler en négatif top et droite.*/
+        /*sans gener l'image et la bordure */
+    width: 100%;
+    height: 100%;
+    top:-15px;
+    right:-15px;
+    z-index: 1;
+    background-color: #fff;
+    opacity: 0.5;
+} 
+
+/*! PAYSAGE */
+#section-paysage{
+    background-image:url(../assets/paysage.jpg) ;
+    color: #fff;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-color: #080808;
+}
+#section-paysage article div a:hover{
+    color: #ec0000;
+}
+
+/*! DRAGON VERT */
+#section-dragon-vert{
+    background-color:rgba(95, 148, 136,0.5);
+}
+#section-dragon-vert article a{
+    background-color: #152020;
+    color: #517a62;
+}
+#section-dragon-vert article div a:hover{
+    color: #741717;
+}
+#section-dragon-vert picture{
+    position: absolute;
+    left: 40%;
+}
+#section-dragon-vert:nth-child(2) picture{
+        /* display: none; */
+        /*?display:none, nous permet de cacher l'image pour travailler sur le reste */
+    width: 20%;
+    position: absolute;
+        /*?position: absolute car la section est en relative
+        /*l'image va donc faire 20% de la taille de la section (son parent direct grace à relative ) et etre placé à 41% a gauche début de la section et a 6% du
+        */
+    left: 40%;
+    bottom: 6%;
+    z-index: 1;
+        /* le z-index permet d'avoir un effet de calque: plus l'index est élevé plus 
+        l'objet est  au dessus des autre */
+    transform: rotateZ(-1.5deg);
+}
+#section-dragon-vert:nth-child(2) picture img{
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+#section-dragon-vert picture .picture-bg{
+    right: 30%;
+    top: -5%;
+}
+#section-dragon-vert picture .picture-border{
+    opacity: 0.95;
+    background-color: #000;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 98.5%;
+    transition: all 400ms ease;
+    text-align: center;
+    line-height: 200px;
+    font-size: 8rem;
+    z-index: 3;
+}
+#section-dragon-vert picture:hover .picture-border{
+    opacity: 0;
+}
+/*! DRAGON NOIR */
+#section-dragon-noir{
+    background-image:url(../assets/dragon\ noir.jpg) ;
+    justify-content: end;
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section-dragon-noir article div a:hover{
+    color: #ff0000;
+}
+/*! DRAGON BLEU */
+#section-dragon-bleu{
+    align-items: center;
+    background-color: rgba(31, 78, 119, 0.5);
+    color: #1f2848;
+}
+#section-dragon-bleu article a{
+    background-color: #1f2848;
+    color: #6699ac;
+}
+#section-dragon-bleu article div a:hover{
+    color: #741717;
+}
+#section-dragon-bleu picture{
+    right: 10%;
+    width: 25%;
+    position: relative;
+}
+#section-dragon-bleu picture .picture-border{
+    right: 5%;
+    top: 5%;
+}
+#section-dragon-bleu picture img{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+#section-dragon-bleu picture .picture-bg{
+    right: 30%;
+    top: -5%;
+}
+#section-dragon-bleu picture .picture-border{
+    opacity: 0.95;
+    background-color: #000;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 98.5%;
+    transition: all 400ms ease;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    font-size: 8rem;
+    z-index: 3;
+}
+#section-dragon-bleu picture:hover .picture-border{
+    opacity: 0;
+}
+
+/*! DRAGON BLANC */
+#section-dragon-blanc{
+    background-image:url(../assets/dragon\ blanc.jpg) ;
+    color: #000000;
+    background-color:#fff;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+#section-dragon-blanc article a{
+    color: #fff;
+    background-color: #333;
+}
+#section-dragon-blanc article div a:hover{
+    color: #741717;
+}
+/*! DRAGON MARRON*/
+#section-dragon-marron{
+    background-color: rgba(220, 211, 196, 0.5);
+    align-items: center;
+}
+#section-dragon-marron article a{
+    background-color: #3c3336;
+    color: #fff;
+}
+#section-dragon-marron article div a:hover{
+    color: #741717;
+}
+#section-dragon-marron picture{
+    width: 30%;
+    position: relative;
+}
+#section-dragon-marron picture .picture-border{
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+}
+#section-dragon-marron picture img{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+#section-dragon-marron picture .picture-bg{
+    width: 110%;
+    height: 108%;
+    left: -5%;
+    top: -5%;
+}
+#section-dragon-marron picture{
+margin-left: 100px;
+position: relative;
+}
+#section-dragon-marron picture .picture-border{
+    opacity: 0.95;
+    background-color: #000;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    transition: all 400ms ease;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    font-size: 8rem;
+    z-index: 3;
+}
+#section-dragon-marron picture:hover .picture-border{
+    opacity: 0;
+}

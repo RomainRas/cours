@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Source+Sans+Pro:ital@0;1&display=swap');
+/*! RESET DE STYLE !*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 1.6rem; 
+        /* = 16px */
+    line-height: 1.3333; 
+        /* Standar de hauteur de ligne */
+    font-family: 'source sans pro', sans-serif;
+        /* Pour font family
+        avec virgule c'est source sans pro ( ou ) sans-serif
+        avec espace c'est l'un et l'autre */
+}
+h1{
+    font-family: 'Inter', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+/*! GLOBAL !*/
+/*
+    .
+        pour appeler une classe (.xxxx)
+    # 
+        pour appeler un id (#xxx)
+    balise,balise --> 
+        cette balise et une autre ( balise peux etre appelé node, voir js )
+    ( space )
+        pour cibler depuis un élément, exemple : exemple body .perso-card h1 = ib part de body, on passe par la balise porte la class " .perso-card" pour cibler le h1
+    + 
+        selecteyr adjacent, cible la balise soeur directement en dessous exemple header+div = nselectionne le div directement en dessous du header
+    > --> 
+        enfant direct : cible le premier enfant correspondant a la balise demandée, exemple : section>header cible le header directement dans la section, a la diférence de " section(space) header(space) " qui va cibler tous les header se trouvant dans la section quelque soit leurs "etages"
+    :first-child 
+        Premier element d'un essemble d'elements
+    :last-child
+        Dernier element d'un ensemble d'elements
+    :nth-child(xn+n) :
+        cible un certain nombre d'element parmis un enssemble en utilisant un patern (une formule) exemple 1 : 4n+1 (selection 1 element par intervale de 4 en commencant par le 1er)
+    odd (pair) et even(impair) : 
+        selextion paire en commencant par 1er ou 2eme x(un chiffre) selectione un unique element
+    :not() :
+        permet d'exclure un element d'un enssemble selectionné : balise:not(cette balise)
+    /- liens et survol -/
+    les liens on doit a 4 pseudo class :
+    :link lien de base ( statique pas encore cliqué )
+    :hover lien survolé (curseur devient pointeur)
+    :active clique sur le lien (couleur change pour du rouge pendant le clique)
+    :visited lien deja cliqué (couleur violet apres le clique)
+
+    la pseudo class :hover fonctionne sur toutes les balises meme si ie et certaine vertion de edge la bloque comme "illégale" sur les elements de titre.
+
+    a:link,a:visited {
+    }
+    a:hover,a:visited {
+    }
+
+*/
+
+.carte {
+    width: 400px;
+    box-shadow: 0 0 10px rgb(95, 87, 87.70)
+        /** 1 = x, 1 = y, 5px = blur ( effacement sur la distance ), 0 =spread (écartement de l'ombre) et la couleur rgba (1ere,2eme,3eme,4eme) 4eme est l'alpha qui defit la transparence de la couleur **/;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+        /* transforme = transforme le comportement de la boite translate = deplace là boite */
+
+
+}
+.carte-image img {
+    width: 100%;
+        /* ici on demande a l'image de faire une largeur egale a 100% de son conteneur parent si on change la largeur on laisse la hauteur libre, si on change la hauteur on laisse la largeur libre pour respecter le ration d'image */
+}
+figcaption {
+    display: block;
+        /* On donne à figcaption la fonction d'une boite car de base elle n'est qu'un texte, elle possede donc des marges,bord etc */
+    margin-bottom: 10px;
+        /* pour les proprietées qui comprte 4 direction : left, right, top,botton : si vous avez 2 chifres alores 1er chiffre = top et botton, puis 2eme chiffre = left et right, si vous avec 4 chiffres alors on calcule dans les sens des aiguilles d'une montre = top / right / bottom / left */
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.carte-image h1{
+    padding: 10px 0;
+    font-size: 3rem;
+}
+.carte-texte p{
+    font-size: 2rem;
+}
+
+.carte footer{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 0 0 4px 4px;
+}
+.carte footer a{
+    display: block;
+        /* pour que les deux <a> qui sont sans bloc en deviennent un et qu'elle occupent le contenant */
+    font-size: 1.8rem;
+    color: #333;
+}
+.carte footer a:hover{
+    text-decoration: underline;
+}

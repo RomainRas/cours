@@ -1,0 +1,227 @@
+/** importation font **/
+@import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/** reset **/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing:border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Gupter', sans-serif;
+    background: url('../assets/bg_paper.png');
+    line-height: 1.333;
+    color: #333;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* h1,h2,h3,h4{
+    font-weight: lighter;
+} */
+h1,h2{
+    font-family:"Nunito", sans-serif;
+}
+/*** global ***/
+
+main{
+    height: 100%;
+    /* padding:0 15%; */
+}
+/*** page ***/
+.page{
+    height: 100%;
+    display: flex;
+}
+/*** cible un enssemble d'article en partant du 3eme **/
+.page:nth-child(3){
+    text-align:right;
+    justify-content: end;
+ }
+.page article{
+    width: 50%;
+    padding:100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.frame article h1,.frame article h2{
+    font-size: 8.5rem;
+    line-height: 1.1;
+}
+.page:first-child article h2{
+    font-size: 4rem;
+    line-height: 1.1;
+}
+.page article .content{
+    font-size: 2rem;
+}
+.btn-content{
+    display: flex;
+}
+.page article a{
+    background-color: #fff;
+    color: #080808;
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;
+}
+
+
+ /** frame **/
+.page:first-child{
+    background:#080808 url('../assets/bg_frame1.jpg')right top no-repeat;
+    background-size:auto 80%;
+    color: #fff;
+}
+.page:nth-child(3){
+    background:#000 url('../assets/bg_frame3.jpg')center center no-repeat;
+    background-size:auto 100%;
+    color: #fff;
+}
+.page:nth-child(5){
+    background:#fff url('../assets/bg_frame5.jpg')right center no-repeat;
+    background-size:auto 100%;
+}
+.page:nth-child(5) article a{
+    color: #fff;
+    background-color: #333;
+}
+/*** page inter ***/
+.page-inter{
+    height: 60%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+   
+    /* padding: 0 10%; */
+}
+.page-inter:nth-child(2){
+    background-color:rgba(95, 148, 136,0.5);
+}
+.page-inter:nth-child(4){
+    background-color: rgba(31, 78,119,0.5);
+}
+.page-inter:nth-child(6){
+    background-color: rgba(220, 211, 196,0.5);
+}
+.page-inter article{
+    width: 50%;
+    height: 100%;
+    padding-top: 50px;
+    position: relative;
+    z-index: 2;
+}
+.page-inter article:last-child{
+    text-align: right;
+}
+.page-inter article:last-child .btn-content,
+.page:nth-child(3) .btn-content{
+   justify-content: end;
+}
+.page-inter article h2{
+    font-size: 4rem;
+}
+.page-inter:nth-child(2) h2{
+    color: #152020;
+}
+.page-inter:nth-child(4) h2{
+    color: #1f2848;
+}
+.page-inter:nth-child(6) h2{
+    color: #3c3336;
+}
+.page-inter article a{
+    color: #fff;
+    background-color: #333;
+}
+.page-inter article:last-child a{
+    right: 10%;
+}
+.page-inter:nth-child(2) article a{
+    background-color: #152020;
+    color: #517a62;
+}
+.page-inter:nth-child(4) article a{
+    background-color: #1f2848;
+    color: #6699ac;
+}
+.page-inter:nth-child(6) article a{
+    background-color:#3c3336;
+}
+.page-inter picture{
+    position: relative;
+    width: 30%;
+}
+.page-inter:nth-child(2) picture{
+    width: 20%;
+    position: absolute;
+    left: 41%;
+    bottom: 6%;
+    z-index:1;
+    transform: rotateZ(-1.5deg);
+}
+.page-inter:nth-child(4) picture{
+    right: 10%;
+    width: 25%;
+}
+.page-inter:nth-child(4) .picture-bg{
+    right: 30%;
+    top: -5%;
+}
+.page-inter:nth-child(4) .picture-border{
+    right: 5%;
+    top: 5%;
+}
+.page-inter:nth-child(6) .picture-bg{
+    width:110%;
+    height: 108%;
+    left: -5%;
+    top: -5%;
+}
+.page-inter:nth-child(6) .picture-border{
+    width:90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+}
+.page-inter picture img{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.picture-bg{
+    position: absolute;
+    background-color: rgba(255, 255, 255,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    right: -5%;
+    top: -3%;
+}
+.picture-border{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    right: 5%;
+    top: 3%;
+    border: 1px rgba(255, 255, 255,0.7) solid;
+}

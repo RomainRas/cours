@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tableau</title>
+</head>
+<style type="text/css">
+	body{
+		font-size: 1.2rem;
+	}
+	table{
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		background: rgba(0, 0, 0, 0.1);
+	}
+	th,td{
+		padding: 5px 15px;
+	}
+	td{
+		background: #fff;
+	}
+	th{
+		background: rgba(255, 255, 255, 0.5);
+	}
+</style>
+<body>
+<p>Pour créer un tableau, il faut un ensemble de balises associées entre-elles :
+La première d'entre-elles est &lt;table&gt;&lt;/table&gt;</p>
+<p>Il s'agit du conteneur du tableau qui englobe tout le reset.</p>
+<p>Ensuite, dans un tableau simple, on utilise des lignes &lt;tr&gt;&lt;/tr&gt;
+qui contiennent elles-même des cellules d'entête et des cellules, respectivement &lt;th&gt;&lt;/th&gt; et &lt;td&gt;&lt;/td&gt;</p>
+<p>Cette structure simple permet déjà, d'organiser ses données en forme de tableau :</p>
+<table>
+	<tr>
+		<th>TH 1</th>
+		<td>TD 1.1</td>
+		<td>TD 1.2</td>
+	</tr>
+	<tr>
+		<th>TH 2</th>
+		<td>TD 2.1</td>
+		<td>TD 2.2</td>
+	</tr>
+	<tr>
+		<th>TH 3</th>
+		<td>TD 3.1</td>
+		<td>TD 3.2</td>
+	</tr>
+</table>
+<p>Pour ajouter une information concernant le tableau (et améliorer l'accessibilité ainsi que le référencement), on peut attribuer à ce tableau, un [caption] avant la première ligne : (à noter qu'il existe une propriété css pour mettre le [caption] en bas du tableau</p>
+<table>
+	<caption>Mon tableau exemple :</caption>
+	<tr>
+		<th>TH 1</th>
+		<td>TD 1.1</td>
+		<td>TD 1.2</td>
+	</tr>
+	<tr>
+		<th>TH 2</th>
+		<td>TD 2.1</td>
+		<td>TD 2.2</td>
+	</tr>
+	<tr>
+		<th>TH 3</th>
+		<td>TD 3.1</td>
+		<td>TD 3.2</td>
+	</tr>
+</table>
+</body>
+</html>

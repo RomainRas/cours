@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<a href="index.html">< Home</a><h1>Formulaire</h1>
+	</header>
+	<main>
+		<form action="php/complet.php" method="post">
+			<h2>Formulaire classique</h2>
+			<fieldset>
+				<legend>Civilité</legend>
+				<p>
+					<label for="ge-1">Femme :</label>
+					<input type="radio" id="ge-1" name="genre" value="0">
+					<label for="ge-2">Homme :</label>
+					<input type="radio" checked id="ge-2" name="genre" value="1">
+				</p>
+				<p class="form-line">
+					<label for="naissance">Date de naissance :</label>
+					<input type="date" id="naissance" name="naissance">
+				</p>
+				<p class="form-line">
+					<label for="nom">Votre nom :</label>
+					<input type="text" name="nom" id="nom">
+				</p>
+				<p class="form-line">
+					<label for="prenom">Votre prénom :</label>
+					<input type="text" name="prenom" id="prenom">
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Sécurité</legend>
+				<div class="form-line">
+					<input type="email" name="mail" placeholder="Mot e-mail">
+					<input type="password" name="pass" placeholder="Mot de passe">
+				</div>
+				<p>
+					<label for="security">votre phrase de sécurité :</label>
+					<select name="phrase" id="security">
+						<option value="0">Quel est le nom de votre premier animal de companie</option>
+						<option value="1">Votre ville de naissance (la pire des questions)</option>
+						<option value="2">Bon bin là, j'avoue, j'ai plus d'idées...</option>
+						<option value="3">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Pariatur, laboriosam?</option>
+					</select>
+				</p>
+				<p class="form-line">
+					<label for="secuRep">Votre réponse :<abbr title="required">*</abbr></label>
+					<input type="text" name="secuRep" id="secuRep" required>
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Listes</legend>
+				<label for="info">Select groupes</label>
+				<select id="info" name="info">
+					<optgroup label="Matériel">
+						<option value="0">Téléphone</option>
+						<option selected value="1">Tablette</option>
+						<option value="2">Ordinateur</option>
+					</optgroup>
+					<optgroup label="Média">
+						<option value="3">Youtube</option>
+						<option value="4">Twitch</option>
+						<option value="5">TV</option>
+					</optgroup>
+				</select>
+				<p class="form-line">
+					<label for="auto">Suggestion auto</label>
+					<input type="text" id="auto" list="liste" />
+					<datalist id="liste">
+						<option>Processeur</option>
+						<option>Carte graphique</option>
+						<option>Wifi</option>
+						<option>USB</option>
+						<option>Alimentation</option>
+						<option>HDMI</option>
+						<option>Casque</option>
+						<option>Disque dur</option>
+					</datalist>
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>CheckBox</legend>
+				<div class="check">
+					<p>
+						<label for="oui">Oui</label>
+						<input id="oui" type="checkbox" name="decision" checked value="oui">
+					</p>
+					<p>
+						<label for="non">Non</label>
+						<input id="non" type="checkbox" name="decision" value="non">
+					</p>
+					<p>
+						<label for="yes">Yes</label>
+						<input id="yes" type="checkbox" name="decision" value="yes">
+					</p>
+					<p>
+						<label for="no">No</label>
+						<input id="no" type="checkbox" name="decision" value="no">
+					</p>
+				</div>
+			</fieldset>
+			<div class="bottom-form">
+				<input type="submit">
+			</div>
+		</form>
+	</main>
+	</body>
+</html>

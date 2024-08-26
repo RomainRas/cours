@@ -1,0 +1,16 @@
+Intégrer le visuel suivant sous forme de page html
+
+Le header est en position fixe
+la largeur du corps central est de 80%
+les tailles sont libres, essayez de vous rapprocher le plus possible du visuel.
+les images sont fourni,
+les adresses d'intégration sont ci-dessous :
+------------------------------------------------------
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OnSxZc47LV8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+------------------------------------------------------
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zT2xjPyeHUs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+------------------------------------------------------
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Tporg5JpZHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+la police de caractère :
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');

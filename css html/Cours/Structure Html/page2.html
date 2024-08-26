@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Structure - page 2 - Médias classiques</title>
+	<style>
+		body{
+			font-size: 1.2rem;
+		}
+		body *{
+			margin:5px 10px;
+			padding:5px 10px;
+		}
+		body>header img{
+			height: 60px;
+		}
+		body>header div{
+			display: flex;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<p>Intégration de médias classiques</p>
+		<div>Un logo <img src="medias/img/logo-base.png" alt="logo du site"> image</div>
+		<nav>			
+			<ul>
+				<li><a href="index.html" title="La page principale">Home (retour à la page principale du site)</a></li>
+				<li><a href="page2.html" title="autre page de ce site">Page 2 (renvoi à cette page)</a></li>
+				<li><a href="#ancre-page2" title="ancre sur cette page">Lien interne utilisant un id pour aller à un endroit précis du présent document (ici section 2)</a></li>
+				<li><a href="index.html#ancre-interne">Lien Section 2 de index</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Intégration de divers éléments, Image, Vidéo et Son :</h1>
+		<section>
+			<h2>Média de type image :</h2>
+			<p>Une image peut être intégrée dans n'importe quel conteneur, du moment qu'elle apporte une signification.
+			<ul>
+				<li>C'est le cas d'images illustrant un article ou une section (elles servent à attirer l'oeil ou à appuyer un propos)</li>
+				<li>C'est le cas d'une icône pour réseau social, d’un bouton qui demande une action</li>
+				<li>Autres cas...</li>
+			</ul>
+			Pour intégrer une image, on utilise alors la balise [img] et son attribut "src" (source) qui permet de lier cette balise à une ressource externe, jpg, png,... et autres formats d'image compris par le navigateur :<br>
+			Ce code <strong>&lt;img src="medias/img/plan_volant.jpg" alt="Plan d'avion"&gt;</strong> s'affiche comme suit :<br>
+			<img src="medias/img/plan_volant.jpg" alt="Plan d'avion">
+			<p>Voici les trois formats d'images supportés les plus connus : jpg / jpeg, gif, png. Il en existe d'autres mais leurs compatibilité, notamment sur les vieux navigateurs, n'est pas garantie<br>
+			Il se peut aussi que, dans un contexte "responsive", vous désiriez changer la résolution de l'image affichée de façon à éviter les images trop lourdes pour "mobile" et trop petites pour "desktop" (stretchées).<br>
+			Première solution pour palier à ce problème : il est possible de faire de la substitution en utilisant la balise [img] classique avec la balise [picture] et la balise [source] qui en dépendent :<br>
+			<strong>&lt;picture&gt;<br>
+				&lt;source srcset="medias/img/plan_volant.jpg" media="(max-width: 600px)"&gt;<br>
+ 				&lt;img src="medias/img/logo-base.png" alt="MDN"&gt;<br>
+			&lt;/picture&gt;</strong>
+			</p>
+			<picture>
+				<source srcset="medias/img/plan_volant.jpg" media="(max-width: 600px)">
+ 				<img src="medias/img/logo-base.png" alt="MDN">
+			</picture>
+			<p>
+			La balise [picture] sert de conteneur pour englober [source] qui apporte des indications et [img] qui servira à afficher ces indications.
+			<br>
+			Pour cet exemple, on donne en paramètre un lien vers une image dans "srcset" et une valeur de taille maxi du document (600px) comme condition d'affichage dans le paramètre "media".
+			Puis à [img], on donne un fichier à son paramètre "src" pour qu'il soit affiché par défaut si la condition de [source] n'est pas remplie ou si [picture] n'est pas comprise par les plus vieux navigateurs.
+			</p>
+			<p>Deuxième possibilité (pour le responsive) : on utilise le paramètre "srcset" dans la balise "img" couplé à un autre paramètre "sizes" qui va nous permettre de conditionner la taille du média.<br>
+			Dans ce cas de figure, le paramètre "srcset" prendra plusieurs valeurs séparées par des virgules, le paramètre "sizes" permettra d’établir des conditions d'affichage suivant des tailles d'écrans que vous aurez défini, exemple :
+			<ul>
+				<li>576px pour mobile (de 0 à 576 pixels)</li>
+				<li>768px pour tablette (de 577 à 768 pixels)</li>
+				<li>576px pour écran moyen (de 769 à 992 pixels)</li>
+				<li>576px pour écran large et plus (de 993 à 1280 pixels et plus)</li>
+			</ul>
+			<em>Ces tailles sont issues de la doc Bootstrap.</em>
+			</p>
+			<p>Dans cet exemple, on indique que l'on souhaite afficher l'image "cartier-haut" si la taille minimale est en dessous de "576px", sinon affichage de l'image "passerelle" si la taille est entre "576px" et "992px", et si ces deux conditions ne sont pas respectées (on se trouve au dessus de 992px) alors, par défaut, affichage de "ville-nuit".<br>
+			Le code : <br>
+			<strong>&lt;img srcset="medias/img/cartier-haut.jpg 400w, medias/img/pasrelle.jpg 920w, medias/img/ville-nuit.jpg 1680w" sizes="(max-width: 576px) 400px,(max-width: 992px) 920px" src="medias/img/ville-nuit.jpg" alt="Villes immaginaires"&gt;</strong><br>
+			Le résultat (réduisez votre fenêtre navigateur gauche/droite et rechargez la page [f5] pour voir le résultat.) :
+			<img srcset="medias/img/cartier-haut.jpg 400w, medias/img/pasrelle.jpg 920w, medias/img/ville-nuit.jpg 1680w" sizes="(max-width: 576px) 400px,(max-width: 992px) 920px" src="medias/img/ville-nuit.jpg" alt="Villes immaginaires">
+			<br>
+			Concrètement, ce qui va se passer au niveau du navigateur c'est : "est-ce que la fenêtre fait entre 0 et 576 pixel ? si oui, affiche l'image qui fait 400px sinon, teste la condition suivante (de 576 à 992px) et si aucune de ces deux conditions n’est vraie alors, affiche la troisième image."<br>
+			<em>Notez que si le navigateur n'est pas capable de comprendre les paramètres "srcset" et "sizes", l'adresse placée dans le paramètre "src" prendra la relève.</em>
+			</p>
+			<p>
+				Dans certains cas, on peut avoir besoin d'afficher du contenu graphique mais sans utiliser de balise [img].
+				C'est le cas d'un fond (background) qui n'apporte pas d'information mais sert à l’esthétique générale de l’élément.<br>
+				Dans ce cas on utilisera le CSS.
+			</p>
+		</section>
+		<section id="ancre-page2">
+			<h2>Média de type Vidéo</h2>
+			<p>Il y a plusieurs façon d’intégrer une vidéo dans une page :</p>
+			<p>soit on utilise une balise [vidéo], soit on utilise un player importé.</p>
+			<article>
+				<h3>Intégration à l'aide de la balise [vidéo]</h3>
+				<p>Ce code <br>
+					&lt;video controls &gt; 
+					<br>
+					&lt;source src="medias/video/" type="video/mp4"  &gt;
+					<br>
+					Votre navigateur ne supporte pas l’élément vidéo
+					<br>
+					&lt;/video&gt;
+				</p>
+				<p>donnera ceci :
+					<video controls>
+						<source src="medias/video/Ori and the Blind Forest.mp4" type="video/mp4">
+					</video>
+				</p>
+				<p>Dans ce cas, on fait plus qu'utiliser une balise : en HTML5, on parlera d'API vidéo<em>API = Application Programming Interface</em> en ce sens que l'on a la possibilité, via un langage de script comme le "Javascript", de communiquer avec le navigateur pour modifier le comportement de cette balise (on n'en parlera pas ici).
+				<br>
+				Toutefois, il est possible, même sans script, de gérer certains paramètres comme ici "controls"
+				<br>
+				Ce paramètre prend deux valeurs : vrai ou faux (true / false) - on veut les commandes du player (lecture son, suivant, pause, etc..) ou non (dans ce cas, on n'a que la vidéo en lecture et c'est tout. <em>note : s'il n'est pas précisé, il est compris par défaut comme "false"</em>
+				<br>
+				D'autres paramètres existent tels que :
+				<ul>
+					<li>autoplay (lancement automatique dès que la page arrive) true/false</li>
+					<li>poster (image à mettre avant le lancement de la vidéo) prend un chemin de fichier comme "src"</li>
+					<li>muted (vidéo sans le son) true/false</li>
+					<li>Et bien d'autres...</li>
+				</ul>
+				</p>
+				<p>Comme pour la balise [picture], la balise [source] sert à préciser quel est le chemin vers la vidéo et son format. On peut en cumuler plusieurs suivant le format de fichier afin de maximiser la compatibilité, mais cela suppose que vous ayez la même vidéo en plusieurs formats sur votre serveur.<br>
+				On précise le format de la vidéo avec le paramètre "type" de la balise [source]
+			</article>
+			<article>
+				<h3>Intégration d'une vidéo avec une source externe :</h3>
+				<p>L’intégration d'une vidéo externe via un site comme Youtube ou Vimeo se fait en général avec une [iframe] fournie par le site en question.</p>
+				<p>Cette [iframe] est un conteneur capable d’héberger une page distante qui, elle, va contenir le player qui lira le flux vidéo.<br>
+				Cette balise, de la même façon qu'une image, a un paramètre "src" à renseigner, contenant l'adresse complète de la ressource ainsi que beaucoup d'autres paramètres.</p>
+				<p>Exemple d’intégration : allez directement sur Youtube, puis, sous le player à droite, cliquez sur "partager", puis "intégrer", copiez l'iframe qui ce trouve en code à droite de la fenêtre et collez-le dans votre document, généralement dans un conteneur [div] que vous aurez créé pour l’occasion, afin de ne pas perturber le fonctionnement des autres composants de votre page.</p>
+				<div class="container-video">
+					<iframe src="https://player.vimeo.com/video/146132595?h=84d4435c5e&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</article>
+		</section>
+		<section>
+			<h2>Média de type Audio</h2>
+			<p>La manière la plus simple pour intégrer un son est d'utiliser une balise [audio] :</p>
+			<p>cette balise, dans son fonctionnement, ressemble beaucoup à la balise [video], elle a aussi besoin du paramètre "src" pour accéder à une source et possède aussi des paramètres</p>
+			<ul>
+				<li>autoplay (lancement automatique dès que la page arrive) true/false</li>
+				<li>muted (vidéo sans le son) true/false</li>
+				<li>controls true/false</li>
+			</ul>
+			<p>Il est aussi possible de manipuler son API à l'aide du "Javascript"</p>
+			<p>Exemple : <audio controls src="medias/sound/Hollow Knight OST - Forgotten Crosseoads.mp3"></audio></p>
+	</main>
+</body>
+</html>

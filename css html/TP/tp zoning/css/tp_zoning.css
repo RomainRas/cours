@@ -1,0 +1,63 @@
+/* reset de style */
+body{
+    background-color: rgb(150, 8, 8);
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 1.6rem; /** 1.6rem c'est la taille de la police, 1 = la taille de base + 0.6 de sa taille**/
+    line-height: 1.333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+ul,ol{
+    list-style: none;
+}
+/* header */
+header{
+    background-color: rgb(221, 221, 221);
+    height: 500px;  
+    display: flex;
+}
+li{
+    display: inline;
+    margin: 40px;
+    padding: 10px;
+}
+.liste1{
+    background-color: rgb(204, 204, 204);
+    height: 25px;
+    width: 550px;
+    font-weight: 700;
+}
+div#titre1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin:auto;
+    height:250px;
+    width: 250;
+}
+div#titre2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin:auto;
+    height:50%;
+}
+/* body */

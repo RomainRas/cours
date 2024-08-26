@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+
+/*** code global ***/
+main{
+	padding: 50px 5%;
+}
+section{
+	border: 1px solid rgba(0, 0, 255, 0.6);
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.container{
+	background-color: rgba(0, 0, 255, 0.1);
+	min-height: 200px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.resize{
+	height: 900px;
+}
+.container div{
+	background-color:rgba(0, 0, 0, 0.2);
+	height: 160px;
+	margin: 10px;
+	text-align: center;
+	line-height: 160px;
+	font-size: 6rem;
+}
+/************/
+
+/*Flex, flex-direction row (par defaut)*/
+.flex1{
+	/** rien :} */
+}
+/*Flex, flex-direction row (par defaut) + justify-content : space-between*/
+.flex1b{
+	justify-content: space-between;
+}
+/* Flex, flex-direction row (par defaut) + justify-content : center */
+.flex1c{
+	justify-content: center;
+}
+/* Flex, flex-direction row (par defaut) + justify-content : flex-end */
+.flex1d{
+	justify-content: flex-end;
+}
+/* Flex, flex-direction row-revers */
+.flex2{
+	flex-direction: row-reverse;
+}
+/* Flex, flex-direction column */
+.flex3{
+	flex-direction: column;
+	width: 20%;
+}
+/* Flex, flex-direction column + justify-content = center */
+.flex3b{
+	width: 20%;
+	flex-direction: column;
+	justify-content: center;
+}
+/* Flex, flex-direction column-reverse */
+.flex4{
+	flex-direction: column-reverse;
+	width: 20%;
+}
+
+.flex4b{
+	flex-direction: column-reverse;
+	width: 20%;
+	justify-content: center;
+	align-items: flex-start;
+}
+/* Utilisation de la regle css flex sur les items du container (1,2,3,4) */
+.item-flex1{
+	flex: 1;
+}
+.item-flex2{
+	flex: 2;
+}

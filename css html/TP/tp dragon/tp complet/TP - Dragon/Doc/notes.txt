@@ -1,0 +1,43 @@
+Titres font Nunito
+Texte font Gupter
+
+body background paper
+
+frame size h 100%
+demi-frame size h 60%
+
+Frame1 :
+color #fff
+btn background #fff
+btn color #000
+titre 1 size 8.5rem
+titre 2 size 4rem
+
+Demi-Frame1 :
+section background rgba(95, 148, 136,0.5)
+titre color #152020
+btn background #152020
+btn color #517a62
+
+Frame2
+color #fff
+btn background #fff
+btn color #000
+titre 1 size 8.5rem
+
+Demi-Frame2 :
+section background rgba(31, 78,119,0.5) 
+titre color #1f2848
+btn background #1f2848
+btn color #6699ac
+
+Frame3
+color #000
+btn background #333
+titre 1 size 8.5rem
+
+Demi-Frame3 :
+section background rgba(220, 211, 196,0.5)
+titre color ##3c3336
+btn background ##3c3336
+btn color #fff

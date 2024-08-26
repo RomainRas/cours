@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex box</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<main>
+		<p>Tout les items (1,2,3,4) sont centrés par raport à leur conteneur parent, grâce
+		à la propriété css align-item = center </p>
+	<section>
+		<h2>Flex, flex-direction row (par défaut)</h2>
+		<p>Direction du flux (du container) gauche/start -- droite/end</p>
+		<div class="container flex1">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	<section>
+		<h2>Flex, flex-direction row-reverse</h2>
+		<p>Direction du flux (du container) droite/start -- gauche/end</p>
+		<div class="container flex2">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	<section>
+		<h2>Flex, flex-direction row (par défaut) + justify-content : space-between</h2>
+		<p>Direction du flux (du container) gauche/start -- droite/end</p>
+		<div class="container flex1b">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	<section>
+		<h2>Flex, flex-direction row (par défaut) + justify-content : center</h2>
+		<p>Direction du flux (du container) gauche/start -- droite/end</p>
+		<div class="container flex1c">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+		<section>
+		<h2>Flex, flex-direction row (par défaut) + justify-content : flex-end</h2>
+		<p>Direction du flux (du container) gauche/start -- droite/end</p>
+		<div class="container flex1d">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	
+	<section>
+		<h2>Utilisation de la règle css flex sur les items du container (1,2,3,4)</h2>
+		<em>chaque item a flex = 1</em>
+		<p>Direction du flux (du container) gauche/start -- droite/end</p>
+		<div class="container">
+			<div class="item-flex1">1</div>
+			<div class="item-flex1">2</div>
+			<div class="item-flex1">3</div>
+			<div class="item-flex1">4</div>
+		</div>
+	</section>
+	<section>
+		<h2>Utilisation de la règle css flex sur les items du container (1,2,3,4)</h2>
+		<em>Trois items a flex = 1, le dernier a flex = 2</em>
+		<p>Direction du flux (du container) gauche/start -- droite/end</p>
+		<div class="container">
+			<div class="item-flex1">1</div>
+			<div class="item-flex1">2</div>
+			<div class="item-flex2">4</div>
+			<div class="item-flex1">3</div>
+		</div>
+	</section>
+	<section>
+		<h2>Flex, flex-direction column</h2>
+		<p>Direction du flux (du container) haut/start -- bas/end</p>
+		<div class="container resize flex3">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	<section>
+		<h2>Flex, flex-direction column + justify-content = center </h2>
+		<p>Direction du flux (du container) haut/start -- bas/end</p>
+		<div class="container resize flex3b">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	<section>
+		<h2>Flex, flex-direction column-reverse </h2>
+		<p>Direction du flux (du container) bas/start -- haut/end</p>
+		<div class="container resize flex4">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	<section>
+		<h2>Flex, flex-direction column-reverse + justify-content = center + align-items = flex-start</h2>
+		<p>Direction du flux (du container) bas/start -- haut/end</p>
+		<div class="container resize flex4b">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</section>
+	</main>
+</body>
+</html>

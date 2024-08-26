@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* reset de style */
+/* color text --> #49ab9a */
+
+body{
+    background-color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 1.6rem; 
+    /** 1.6rem c'est la taille de la police, 1 = la taille de base + 0.6 de sa taille**/
+    line-height: 1.333;
+    font-family: 'Montserrat', sans-serif; 
+    /* '' = que c'est une ressource  */
+    /* 'Montserrat' si il trouve pas la police Montserrat il va utiliser sans-serif et ainsi de suite */
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+/* header */
+body>header{
+    background-color:#fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+body>header nav ul{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    text-decoration: none;
+    color: black;
+}
+body>header nav ul a{
+    color: #666
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color:#49ab9a ;
+}
+.logo p{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+.logo img{
+    height: 50px;
+}
+.search{
+    display: flex;
+}
+.search input{
+    border: none;
+    height: 27px;
+    padding-left: 5px;
+    color: black;
+    background: none;
+    cursor: pointer;
+}
+.search input::placeholder{
+    color: black;
+}
+.search button{
+    width: 27px;
+    height: 27px;
+    background: url('./img/ico_search.svg') center center no-repeat; 
+    /* ./ pour aller à la racine du dossier la ou se situe le html */
+    background-size: 100%;
+    border: none;
+    cursor: pointer;
+}
+/* global */
+section{
+    background:url('./img/ponton.jpg') right center no-repeat; /* ../ = retour en arriere du dossier racine, le nom pour avancer */
+    background-size: 55% auto;
+    height: calc(100% - 80px);
+    color: #49ab9a;
+}
+.title{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    width: 25%;
+    transform: translate(-50%,-50%);
+    /* Transform = on bouge le point d'origine qui est toujours le point zero, zero, ceci ne conscerne que lui meme et non pas la boite dans laquelle il est
+    On bouge on peux faire un translate x,y,z en fonction de l'axe */
+}
+.title h1{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 14rem;
+    font-weight: lighter;
+    line-height: 1;
+}
+.title h2{
+    font-weight: normal;
+    font-size: 2.8rem;
+    padding: 15px 0;
+    /* ordre du padding : top right bottom left */
+}
+.title a{
+    display: block;
+    width: 250px;
+    height: 55px;
+    line-height: 55px;
+    border: #49ab9a 2px solid;
+    color: #49ab9a;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 300ms ease-in-out;
+}
+.title a:hover{
+    color:#fff;
+}
+.title a span{
+    position: relative;
+    z-index: 2;
+}
+.title a div{
+    position: absolute;
+    width: 0%;
+    height: 55px;
+    background-color: #49ab9a;
+    top: 0;
+    z-index: 1;
+    transition: width 300ms ease-in-out;
+}
+.title a:hover div{
+    width: 100%;
+}

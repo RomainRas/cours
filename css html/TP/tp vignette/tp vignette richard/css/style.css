@@ -1,0 +1,85 @@
+/** font **/
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+/** reset de style **/
+*{    
+   margin: 0;
+   padding: 0;
+   outline: none;
+   box-sizing: border-box;
+}
+html{
+    font-size: 62.5;
+}
+html,body{
+    width: 100%;
+    height: 100%;    
+    position: relative;
+}   
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem; /** = 16px **/
+    font-family: 'Neuton' , sans-serif;
+    background-color: rgba(255, 255, 255, 255);
+    line-height: 1.333;
+    /**todo vérifier la license de la police **/
+}
+main{
+    width: 400px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 115px 750px 115px 760px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 5px rgb(95, 87, 87.70) ; 
+    /** 1 = x, 1 = y, 5px = blur ( effacement sur la distance ), 0 =spread (écartement de l'ombre) et la couleur **/
+}
+/* header */
+header{
+    width: 400px;
+    height: 440px;
+    padding: 10px;
+    text-align: left;
+}
+img{
+    width: 380px;
+    height: 380px;
+}
+h2{
+    font-size: 20px;
+    font-weight: normal;
+    color: gray;  
+    padding: 10px;    
+    border-bottom: 2px solid gray;  
+}
+/* section */
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10px;
+}
+h1{
+    padding-bottom: 10px;
+}
+.descriptif{
+    font-size: 20px;
+    font-weight: normal;
+    color: gray;
+    
+    padding-bottom: 20px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: normal;
+    color: gray;
+    background-color: rgba(229, 229, 229, 255);
+    border-radius: 0px 0px 3px 3px;
+    padding-left: 10px;
+}

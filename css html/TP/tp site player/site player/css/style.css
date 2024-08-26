@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*! RESET DE STYLE !*/
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%; /* 1.6rem = 16px */
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+body{
+    font-size: 1.6rem; /* 1.6rem = 16px */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.3333;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/*! GLOBAL !*/
+
+main{
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg_accueil.png) center center no-repeat fixed;
+    /* center ( largeur ) center ( hauter ) */
+    /* no repeat = Le background ne va pas se repeter */
+    background-size: cover;
+    /* taille Hauteur/largeur ; cover pour recouvrir toute la surface */
+    padding: 0 4.16666666%;
+}
+
+/*! HEADER !*/
+
+main>header{
+    width: 100%;
+    height: 90px;
+    /* hauteur */
+    display: flex;
+    /* Par defaut il est en row = en ligne */
+    /* Permet à la boite parent de justify ses enfants */
+    justify-content: space-between;
+    align-items:center ;
+    /* align-items: aligne les enfants les uns par rapport aux autres */
+    /* Pour centrer tous les ellements par rapport à la hauteur */
+}
+main>header h1{
+    color: #fff;
+    width: 150px;
+    font-size: 2.2rem;
+    font-weight: normal;
+    /* h1 est un peu gras, c'est pour reduire la taille, il est bold de base */
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+.container-menu {
+    display: flex;
+        /**  flex-direction: row; direction par défaut (en ligne) **/
+    align-items: center;
+}
+.container-menu button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.container-menu button:first-child
+/* First-child : toujours le premier enfant peu importe la situation */
+/* Last-Child : toujours le dernier enfant peu importe la situation */
+/* Nth-Child(x) : l'enfant x peu importe la situation */
+{
+    background: url(../img/btn_playlist.png) center center no-repeat;
+    background-size: 60% auto; 
+}
+.search-song{
+    display: flex;
+    align-items: center;
+}
+.search-song input{
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    /* Pour que le texte ne soit pas colé à la barre de recherche */
+    border-radius: 3px;
+    /* ordre : 1topleft 1topright 1bottomright 1bottomleft */
+    box-shadow:inset 0 0 10px 0 rgba(0, 0 , 0, 0.5);
+    /* inset = ombre interieur 0=x, 0=y, 5px=blur , 0=spread (ecartement de l'ombre ) ( r, g , b , 0.=opacité ) */
+    /* outset(par defaut) ombre exterieur */
+    opacity: 0;
+    width: 0;
+    transition: all 300ms ease-in-out;
+}
+.search-song:hover input{
+    opacity: 1;
+    width: 200px;
+
+}
+.search-song button{
+    background: url(../img/btn_search.svg) center center no-repeat;
+    background-size: 60% auto; 
+
+}
+.container-menu button:nth-child(3){
+/* Nth-Child : toujours le premier enfant peu importe la situation */
+
+    background: url(../img/btn_genre.png) center center no-repeat;
+    background-size: 60% auto; 
+}
+
+/*! MENU GLOBAL !*/
+.menu-global-panel{
+    position: fixed;
+    top: 0;
+    right: -140px;
+    height: 100%;
+    width: 180px;
+    padding: 80px 0 10px 0;
+    transition: right 400ms ease-in-out;
+}
+
+.menu-global-panel.open{
+    right:0;
+}
+.menu-global-btn{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 24px;
+    right: 20px;
+    cursor: pointer;
+}
+.menu-global-btn span,
+.menu-global-btn span:before,
+.menu-global-btn span:after{
+    /* 
+    :before / :after 
+        sont des pseudo elements, ils simulent la creation de quelque chose, ils ont donc besoin de content pour exister
+        ils permettent de créer des pseudo-elements ( des balises qui n'existent que dans css )
+        ces pseudo elements sont une copie virtuelle d'un element deja existant ( ici span )
+        Pour exister ils ont imperativement besoin de la proprieté "content" avec n'importe quelle valeur ( ici un espace )
+        lors de leurs création leur point d'origine (x-0,y-0) est calculé à partir du point d'origine de leur parent
+    :before
+        explication
+    :after
+        explication
+    */
+    background-color: #fff;
+    width: 15px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    transition: all 400ms ease-in-out;
+}
+.menu-global-btn span:before,
+.menu-global-btn span:after{
+    content: " ";
+}
+.menu-global-btn span:before{
+    top:-10px;
+    width: 25px;
+    right: 0;
+}
+.menu-global-btn span:after{
+    top: 10px;
+    width: 20px;
+    right: 0;
+}
+/** animation btn **/
+.menu-global-panel.open .menu-global-btn span{
+    background-color: rgba(255, 255 , 255, 0);
+}
+.menu-global-panel.open .menu-global-btn span:before{
+    top:0;
+    width: 30px;
+    transform: rotateZ(495deg);
+}
+.menu-global-panel.open .menu-global-btn span:after{
+    top:0;
+    width: 30px;
+    transform: rotateZ(585deg);
+}
+
+.menu-global-panel nav li:nth-child(odd){
+    height: 70px;
+    border-left: 2px solid #fff;
+    margin-left: 7px;
+}
+.menu-global-panel nav a{
+    line-height: 2.4;
+    font-size: 1.8rem;
+    color: #fff;
+}
+.menu-global-panel nav span{
+    padding-left: 15px;
+}
+/*! CORPS DU PLAYER !*/
+.player{
+    align-items: center;
+}
+.player-content {
+    display: flex;
+}
+.player-content>*{
+    /* Toutes les balises enfants sont ciblées grace au >* */
+    width: 33.333333333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/** colonne gauche **/
+/* redimension du titre pour obliger le text a 
+aller a la ligne a chaque mots */
+.title-content-song{
+    color:#fff;
+    position: relative;
+    width: 400px;
+}
+.title-content-song h2{
+    font-size: 6.7rem;
+    font-weight:bolder;
+    line-height: 0.9;
+}
+.title-content-song p{
+    width:135px;
+    font-size: 1.15rem;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 200px;
+    top: 137px;
+    padding-left: 5px;
+    line-height: 1.05;
+}
+/*** placement du disque et de la fraise ***/
+.player-visual{
+    position: relative;
+}
+.player-visual img:first-child{
+    position: relative;
+    z-index: 3;
+}
+.player-visual img+img{
+    position: absolute;
+    z-index: 1;
+    top: 132px;
+    left:103px;
+    transform: rotateZ(25deg);
+}
+
+
+/** tempo disparitiojn des images ***/
+.player-content aside img{
+    display: none;
+}
+.social img{
+    display: none;
+}

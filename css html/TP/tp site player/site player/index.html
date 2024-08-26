@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Music Inspiration</h1>
+            <div class="container-menu">
+                <button class="playlist-btn"></button>
+                <form class="search-song" action="index.html" method="post">
+                    <input type="text" name="title">
+                    <button type="submit"></button>
+                </form>
+                <button class="parameter-btn"></button>
+                <div id="menu-global" class="menu-global-panel">
+                    <div class="menu-global-btn">
+                        <span></span>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li></li>
+                            <li><a href="#">01 <span>Home</span></a></li>
+                            <li></li>
+                            <li><a href="#">02 <span>Song</span></a></li>
+                            <li></li>
+                            <li><a href="#">03 <span>Blabla truc</span></a></li>
+                            <li></li>
+                            <li><a href="#">04 <span>Lyrics</span></a></li>
+                            <li></li>
+                            <li><a href="#">05 <span>Video Clip</span></a></li>
+                            <li></li>
+                            <li><a href="#">06 <span>Shear</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="player-content">
+            <article>
+                <div class="title-content-song">
+                    <h2>The Strawberry Attack</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitut</p>
+                </div>
+                <img src="./img/cardio.png" alt="icon-du-player">
+                <h3 class="autor-song">Martin Garrix</h3>
+            </article>
+            <div class="player">
+                <audio id="player-node"></audio>
+                <div class="player-visual">
+                    <img src="./img/bg_vinyl.png" alt="dique-vinyle">
+                    <img src="./img/fraise-dents.png" alt="Fraise avec dents, cover song">
+                </div>
+                <div>
+                    <nav id="controls-player" class="controls-player">
+                        <button class="prev-song-btn"></button>
+                        <button class="prev-song-btn"></button>
+                        <button class="next-song-btn"></button>
+                    </nav>
+                    <h3 class="player-title-song">The Strawberry Attack</h3>
+                    <p class="content-data">Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <aside>
+                <ul class="current-playlist">
+                    <li>
+                        <img class="cover-single-playlist" src="./img/fraise-dents.png" alt="">
+                        <button class="play-btn-playlist"></button>
+                        <div class="data-single-playlist">
+                            <h2>The Strawberry Attack</h2>
+                            <h3>Martin Garrix</h3>
+                        </div>
+                        <span class="time-single-playlist">3:25</span>
+                    </li>
+                    <li>
+                        <img class="cover-single-playlist" src="./img/gorilaz.jpg" alt="">
+                        <button class="play-btn-playlist"></button>
+                        <div class="data-single-playlist">
+                            <h2>Clint Eastwood</h2>
+                            <h3>Gorillaz</h3>
+                        </div>
+                        <span class="cover-single-playlist" class="time-single-playlist">3:25</span>
+                    </li>
+                    <li>
+                        <img class="cover-single-playlist" src="./img/jamiroquai.jpg" alt="">
+                        <button class="play-btn-playlist"></button>
+                        <div class="data-single-playlist">
+                            <h2>Emergency On Planet Earth</h2>
+                            <h3>Jamiroquai</h3>
+                        </div>
+                        <span class="time-single-playlist">3:25</span>
+                    </li>
+                    <li>
+                        <img class="cover-single-playlist" src="./img/muse.jpg" alt="">
+                        <button class="play-btn-playlist"></button>
+                        <div class="data-single-playlist">
+                            <h2>Thoughts of a Dying Atheist</h2>
+                            <h3>Muse</h3>
+                        </div>
+                        <span class="time-single-playlist">3:25</span>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+        <footer>
+            <div>
+                <nav class="social">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./img/ico_facebook.svg" alt="player-reseau-facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/ico_twitter.svg" alt="player-reseau-twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                              <a href="./img/ico_youtube.svg" alt="player-reseau-youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               <a href="./img/ico_instagram.svg" src="player-reseau-instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <a href="./img/ico_deezer.svg" alt="player-reseau-deezer">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <a href="#">
+                    <span>Add to Deezer</span>
+                    <img src="./img/ico_deezer.svg" alt="player-deezer">
+                </a>
+            </div>
+            <div>
+                <button>
+                    <img src="./img/btn_back.svg" alt="Bouton-avant">
+                </button>
+                <button>
+                    <img src="./img/btn_next.svg" alt="bouton-suivant">
+                </button>
+            </div>
+        </footer>
+    </main>
+</body>
+<script type="text/javascript" src="./js/main.js"></script>
+</html>

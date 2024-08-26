@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Structure page 1</title>
+	<style>
+		body{
+			font-size: 62.5%;
+		}
+		body *{
+			font-size: 1.2rem;
+			background: rgba(0, 0, 0, 0.1);
+			border: 1px solid  rgba(0, 0, 0, 0.3);
+			width: fit-content;
+			margin: 10px;
+			padding: 10px;
+		}
+		body>header,body>footer,main{
+			width: 90%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.exemple{
+			background: #fff;
+		}
+		.exemple *{
+			background: #fff;
+			border: none;
+			margin: initial;
+			padding: 5px 20px;
+		}
+		.exemple h1{
+			text-transform: uppercase;
+			font-size: 1.8rem;
+		}
+		.exemple h2{
+			font-size: 1.6rem;
+		}
+		.exemple h3{
+			font-size: 1.4rem;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<p>Ici, le [header] de la page ne concerne pas le corps de page contenu dans la balise [main] et contient le logo et la navigation par exemple</p>
+		<nav>
+			<p>Cet élément [nav] contient la navigation globale du site (ancres et liens externes)</p>
+			<p><em>Dans le cadre d'une liste de liens, on utilise souvent un [ul] (balise de liste non ordonnée) qui contient des [li] (item liste) contenant eux-même des [a] (ancres)(</em></p>
+			<ul>
+				<li><a href="index.html" title="La page principale">Lien interne, le paramètre "href" contient une adresse menant à cette page (retour home)</a></li>
+				<li><a href="page2.html" title="autre page de ce site">Lien externe, le paramètre "href" contient une adresse menant à une autre page du site</a></li>
+				<li><a target="_blanc" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" title="page externe (wikipedia)">Lien externe, le paramètre "href" contient une adresse menant à une page d'un autre site</a></li>
+				<li><a href="#ancre-interne" title="ancre sur cette page">Lien interne utilisant un id pour aller à un endroit précis du présent document (ici, section 2)</a></li>
+				<li><a href="page2.html#ancre-page2">On peut cumuler les deux techniques externe / interne en allant à un endroit précis d'une autre page du site</a></li>
+				<li><a href="formulaire.html">Formulaire</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>1 Corps principal de la page (titre niveau 1)</h1>
+		<section>
+			<h2>1.1 Ceci est une [section] de la page (titre niveau 2)</h2>
+			<p>Ce texte est dans une balise [p] (paragraphe) qui sert de description et a un rapport avec les articles suivants pour lesquels elle apporte un complément d'information</p>
+			<article>
+				<header>
+					<h3>1.1.1 ce titre (niveau 3) est placé dans un [header] de l'article</h3>
+				</header>
+				<p>Le titre ci-dessus signifie que les informations contenues dans l'article sont en rapport avec la section qui le contient mais aussi avec le corps principal de la page.</p>
+				<p>En général, on évite de cumuler dans une même page, deux domaines trop distant (en terme de concept), pour des raisons de facilité de lecture pour l'utilisateur mais aussi de référencement naturel et d’accessibilité</p>
+				<p>Par exemple, on ne mélange pas "Informatique" et "Musique" sur une même page, de même qu'un journal, dans une page, ne mélange pas “Politique” et “Programme TV”. Dans ce cadre, il est facile de comprendre que les différents textes d'une page ont un rapport entre eux et donc, naturellement, la hiérarchie des [section], [article], [titre] [etc...] aussi.</p>
+				<p>Si l'on reprend la structure de cette page, on remarque que : <br />
+					titre global 1 suivit de titre de sections 1.1 et 1.2 possédent, eux, des articles titrés de 1.1.1 à 1.1.2 pour le premier (1er et 2ème article > de section 1 de > page), et des articles titrés de 1.2.1 à 1.2.3 pour le deuxième (1er , 2ème et 3ème articles > de section 2 > de page)
+				</p>
+			</article>
+			<article>
+				<header>
+					<h3>1.1.2 un exemple plus concret : </h3>
+				</header>
+				<p>Je souhaite créer un site sur les transports (voiture, avion, bateau), je vais donc commencer par préciser quelle page va parler de quoi. Dans notre exemple, j'aurai donc un site avec trois pages et un [h1] unique sur chaque page, donnant une idée du contenu global de celle-ci.<br />
+				Puis on imagine une section parlant de l'histoire et évolution du transport proposé, une autre sur ses différents organes (moteur, châssis et autre pour la voiture par exemple), une autre sur ses différents types (monoplace, coupé, berline).
+				</p>
+				<div class="exemple"><!-- ce div n'est là que pour la mise en forme de l'exemple -->
+					<p><strong>- Si je formalise cet exemple, voilà ce que cela peut donner :</strong></p>
+					<h1>La voiture (titre de page)</h1>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+					<section>
+						<h2>Histoire et évolution (titre de section 1) :</h2>
+						<p>La voiture a connu bien des évolutions à travers le temps pour arriver à, bla bla bla...</p>
+						<article>
+							<h3>Au début, la voiture à vapeur (titre article 1)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+						<article>
+							<h3>La voiture à essence (titre article 2)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+						<article>
+							<h3>La voiture électrique (titre article 3)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+					</section>
+					<section>
+						<h2>Les principaux organes d'une voiture (titre de section 2) :</h2>
+						<article>
+							<h3>Le châssis, base de la voiture (titre article 1)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+						<article>
+							<h3>Le moteur et ses différents types et positions (titre article 2)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+						<article>
+							<h3>La carrosserie, évolution des matériaux et profils (titre article 3)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+					</section>
+					<section>
+						<h2>Les différents types de voiture (titre de section 3) :</h2>
+						<article>
+							<h3>La berline (titre article 1)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+						<article>
+							<h3>Le coupé sport (titre article 2)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+						<article>
+							<h3>Le 4x4 (titre article 3)</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus pariatur placeat cupiditate, laudantium tenetur eligendi sit debitis minus. Eveniet hic sint dignissimos molestiae ducimus, fugit obcaecati dolorum nobis dicta similique corporis ipsa nam ab perspiciatis eum culpa sunt id, ipsum excepturi nisi! Ab nostrum distinctio pariatur labore consequuntur, ullam.</p>
+						</article>
+					</section>
+				</div>				
+			</article>
+		</section>
+		<section id="ancre-interne">
+			<h2>1.2 Ceci est une section de la page (titre niveau 2) que l'on peut atteindre avec l'ancre du menu</h2>
+			<article>
+				<header>
+					<h3>1.2.1 titre </h3>
+				</header>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis dolores reprehenderit, laboriosam nostrum distinctio itaque.</p>
+				<footer>
+					<p>Ce [footer] apporte des informations supplémentaires comme une ranking (classement de l'article) et/ou la possibilité de voter</p>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h3>1.2.2 titre </h3>
+				</header>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolorem, voluptatibus velit amet sunt animi.</p>
+				<footer>
+					<p> L'auteur et la date</p>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h3>1.2.3 titre </h3>
+				</header>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Voluptatibus, sapiente ipsa doloribus. Quidem, perspiciatis magnam.</p>
+				<footer>
+					<p>une série de lien "en savoir plus"</p>
+				</footer>
+			</article>
+		</section>
+	</main>
+	<footer>
+		Ce [footer] est comme le [header] du site : il n'est pas dans le corps de la page et n’apporte pas d'infos supplémentaires sur son contenu, mais de manière globale sur la page ou le site complet.
+		c'est souvent à cet endroit que l'on trouve le copyright, les CGU/CGV, un plan du site navigable et autres références.
+	</footer>
+</body>
+</html>

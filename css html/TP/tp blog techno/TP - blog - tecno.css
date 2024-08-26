@@ -1,0 +1,184 @@
+/** Reset de style **/
+body{
+    background-color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 1.6rem; 
+    line-height: 1.333;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: white;
+}
+/* Reset de style */
+
+/** HEADER **/
+.header{
+    background-color: black;
+    border-bottom: 4px solid #037491;
+}
+.header-logo-text {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    border: 1px solid #000; /* Bordure pour visualiser le conteneur */
+    padding: 10px;
+}
+.header-logo {
+    max-width: 70px; /* Limite la taille de l'image */
+    margin-right: 15px; /* Espace entre l'image et les textes */
+}
+.header-logo-text {
+    display: flex;
+    flex-direction: column; /* Aligne les textes verticalement */
+    justify-content: center; /* Centre les textes verticalement */
+}
+.header-logo-text1 {
+    margin-bottom: 5px; /* Espace entre les blocs de texte */
+    color: white;
+    font-size: 25px;
+}
+.liens-header {
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    display: flex; /* Utilise Flexbox pour aligner les éléments en ligne */
+    padding-left: 150px;
+    text-decoration: none;
+}
+.liens-header li {
+    margin-right: 50px; /* Espace entre les éléments de la liste */
+}
+.liens-header li:last-child {
+    margin-right: 0; /* Supprime l'espace après le dernier élément */
+}
+.liens-header a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #037491; /* Couleur des liens */
+    font-weight:lighter; /* Met le texte en gras */
+}
+/** HEADER **/
+/* PREMIERE SECTION */
+body{
+    justify-content: center;
+}
+.section1 {
+    width: 80%;
+    height: 40%;
+    overflow: hidden;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    display: flex; /* Utilise Flexbox pour la mise en page */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: space-between; /* Espace entre les éléments */
+    padding: 5px;
+    box-sizing: border-box; /* Inclut le padding dans la taille totale de l'élément */
+    background-color: #000;
+}
+.text-section1 {
+    flex: 1; /* Prend tout l'espace disponible à gauche */
+    margin-right: 20px; /* Espace entre la section texte et l'image */
+    color: white;
+}
+.text-section1 div {
+    margin-bottom: 20px; /* Espace entre les blocs de texte */
+    margin: 40px;
+}
+.text-section1 h2 {
+    font-size: 1.5em;
+}
+.text-section1 h6 {
+    font-size: 1.1em;
+}
+.text-section1 p {
+    font-size: 1em;
+}
+.image-section1 {
+    flex: 1; /* Prend tout l'espace disponible à droite */
+    text-align: right; /* Aligne l'image à droite */
+}
+.image-section1 img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    padding-right: 15%;
+}
+.search {
+    padding: 2px 5px; /* Réduit le padding pour une taille plus petite */
+    border: 1px solid #fff; /* Bordure blanche autour de la case */
+    background-color: #000; /* Fond noir pour la case */
+    cursor: pointer; /* Curseur de main pour indiquer que c'est cliquable */
+    transition: background-color 0.3s; /* Transition douce pour le survol */
+    font-size: 0.5em; /* Réduit la taille du texte */
+    max-width: fit-content; /* Ajuste la largeur au contenu */
+}
+.search:hover {
+    background-color: #333; /* Couleur de fond au survol */
+}
+.search #plus{
+    font-size: 0.8rem;
+    color: white;
+    margin-right: 150px;
+    margin-left: 10px;
+}
+.search a {
+    text-decoration: none; /* Supprime le soulignement du lien */
+    display: flex;
+    align-items: center;
+}
+.search img {
+    margin-right: 10px;/* Espace entre le texte et l'image de la flèche */
+    width: 16px; /* Ajuste la largeur de l'image */
+    height: 16px; /* Ajuste la hauteur de l'image pour la garder proportionnelle */
+    object-fit: contain; /* Assure que l'image s'adapte au conteneur */
+}
+/** PREMIERE SECTION **/
+/** SECONDE SECTION **/
+
+.premiere-case {
+    width: 55%;
+    height: 10%;
+    overflow: hidden;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    display: flex; /* Utilise Flexbox pour la mise en page */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: space-between; /* Espace entre les éléments */
+    padding: 5px;
+    box-sizing: border-box; /* Inclut le padding dans la taille totale de l'élément */
+    background-color: #000;
+}
+.text-premiere-case {
+    flex: 1; /* Prend tout l'espace disponible à gauche */
+    margin-right: 20px; /* Espace entre la section texte et l'image */
+    color: white;
+}
+.text-premiere-case div {
+    margin-bottom: 20px; /* Espace entre les blocs de texte */
+    margin: 40px;
+}
+.text-premiere-case h2 {
+    font-size: 1.5em;
+}
+.text-premiere-case h6 {
+    font-size: 1.1em;
+}
+.text-premiere-case p {
+    font-size: 1em;
+}
+.image-premiere-case {
+    flex: 1; /* Prend tout l'espace disponible à droite */
+    text-align: right; /* Aligne l'image à droite */
+}
+.image-premiere-case img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    padding-right: 15%;
+}
