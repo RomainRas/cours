@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    <!DOCTYPE html> :
+    Cette déclaration indique au navigateur que ce document est en HTML5.
+-->
+<html lang="fr">
+<!--
+    <html lang="fr"> :
+    La balise <html> est la racine de tout document HTML.
+    L'attribut "lang" définit la langue principale du document, ici "fr" pour le français.
+-->
+<head>
+    <meta charset="UTF-8">
+    <!--
+        <meta charset="UTF-8"> :
+        Cette balise définit l'encodage des caractères pour le document.
+        UTF-8 est utilisé pour permettre l'affichage de caractères spéciaux comme les accents.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        <meta name="viewport"> :
+        Cette balise permet à la page de s'adapter à la taille de l'écran de l'utilisateur,
+        rendant le document responsive (adaptable sur mobile, tablette et ordinateur).
+    -->
+
+    <title>Cours sur les Tableaux HTML</title>
+    <!--
+        <title> :
+        Définit le titre de la page, qui s'affiche dans l'onglet du navigateur.
+        Il est également utilisé par les moteurs de recherche pour comprendre le contenu de la page.
+    -->
+
+    <!-- Lien vers le fichier CSS externe pour styliser la page -->
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <link rel="stylesheet"> :
+        Cette balise permet de lier un fichier CSS externe pour ajouter du style à la page HTML.
+    -->
+</head>
+
+<body>
+
+    <h1>Cours sur les tableaux en HTML</h1>
+    <!--
+        <h1> :
+        La balise <h1> représente le titre principal de la page.
+        Il ne doit y avoir qu'un seul <h1> par page pour indiquer l'en-tête principal.
+    -->
+
+    <!-- Introduction sur les tableaux en HTML -->
+    <p>
+        Un tableau en HTML est une structure qui permet de représenter des données sous forme de grille.
+        Il est principalement constitué des balises &lt;table&gt;, &lt;tr&gt;, &lt;th&gt; et &lt;td&gt;.
+    </p>
+
+    <p>
+        Voici la structure de base :
+        <ul>
+            <li>&lt;table&gt; : La balise englobante qui contient tout le tableau.</li>
+            <li>&lt;tr&gt; : Chaque ligne du tableau.</li>
+            <li>&lt;th&gt; : Les cellules d'en-tête (header), qui définissent les titres des colonnes ou des lignes.</li>
+            <li>&lt;td&gt; : Les cellules de données.</li>
+        </ul>
+    </p>
+
+    <p>Exemple de tableau simple :</p>
+
+    <!-- Exemple de tableau sans légende -->
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Ville</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>28</td>
+            <td>Paris</td>
+        </tr>
+        <tr>
+            <td>Marie</td>
+            <td>24</td>
+            <td>Lyon</td>
+        </tr>
+        <tr>
+            <td>Paul</td>
+            <td>32</td>
+            <td>Toulouse</td>
+        </tr>
+    </table>
+
+    <!-- Explication du tableau :
+         Ce tableau contient 3 colonnes (Nom, Âge, Ville) et 3 lignes de données.
+         Les en-têtes sont définis par <th>, et les données par <td>.
+    -->
+
+    <p>
+        Pour améliorer l'accessibilité et la compréhension du contenu d'un tableau, on peut ajouter une légende
+        avec la balise &lt;caption&gt; pour décrire le tableau.
+    </p>
+
+    <!-- Exemple de tableau avec légende -->
+    <table>
+        <caption>Informations des utilisateurs</caption>
+        <tr>
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Ville</th>
+        </tr>
+        <tr>
+            <td>Luc</td>
+            <td>29</td>
+            <td>Marseille</td>
+        </tr>
+        <tr>
+            <td>Anne</td>
+            <td>35</td>
+            <td>Nantes</td>
+        </tr>
+        <tr>
+            <td>Marc</td>
+            <td>40</td>
+            <td>Bordeaux</td>
+        </tr>
+    </table>
+
+    <!-- Explication du tableau avec légende :
+         Ce tableau est similaire au premier, mais il inclut une légende (<caption>) qui donne une description du tableau.
+         Cela améliore l'accessibilité et aide les utilisateurs à comprendre rapidement le but du tableau.
+    -->
+
+</body>
+</html>

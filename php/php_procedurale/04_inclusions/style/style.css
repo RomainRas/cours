@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+}
+
+header {
+	height: 100px;
+	background-color: red;
+}
+
+nav {
+	height: 30px;
+	background-color: orange;
+}
+
+section {
+	height: 500px;
+	background-color: yellow;
+}
+
+footer {
+	height: 100px;
+	background-color: red;
+}

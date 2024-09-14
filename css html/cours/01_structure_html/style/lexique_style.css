@@ -1,0 +1,141 @@
+/* 
+Style de base pour la page entière :
+- Police générale définie sur Arial, car c'est une police simple et lisible.
+- Suppression des marges par défaut du navigateur.
+- Ajout d'un padding de 20px pour l'espace autour du contenu.
+- Le fond est légèrement gris (#f4f4f4) pour une lecture plus confortable.
+- L'espacement entre les lignes est défini à 1.6 pour améliorer la lisibilité.
+*/
+body {
+    font-family: Arial, sans-serif; /* Police simple et lisible */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 20px; /* Padding autour du contenu */
+    background-color: #f4f4f4; /* Fond gris clair */
+    line-height: 1.6; /* Espacement des lignes pour faciliter la lecture */
+    color: #333; /* Couleur de texte principale en gris foncé */
+}
+
+/* 
+Style pour les titres principaux et secondaires :
+- Les titres ont un fond sombre (#333) avec du texte blanc pour un fort contraste.
+- Le padding intérieur rend le texte moins serré.
+- Les coins sont arrondis avec un border-radius pour donner un aspect moderne.
+*/
+h1, h2 {
+    background-color: #333; /* Fond gris foncé */
+    color: white; /* Texte en blanc pour contraste */
+    padding: 15px; /* Ajoute du padding autour du texte */
+    border-radius: 5px; /* Coins arrondis pour un style moderne */
+}
+
+/* 
+Style spécifique au titre principal <h1> :
+- La taille de police est définie à 28px pour être bien visible.
+- Le texte est centré pour attirer l'attention sur le titre principal.
+*/
+h1 {
+    font-size: 28px; /* Taille de police plus grande pour le titre principal */
+    text-align: center; /* Centre le texte du titre */
+}
+
+/* 
+Style pour les sous-titres <h2> :
+- Les sous-titres sont légèrement plus petits que le titre principal.
+- Le margin-top ajoute un espace avant le sous-titre pour bien le séparer du contenu précédent.
+*/
+h2 {
+    font-size: 22px; /* Taille de police des sous-titres */
+    margin-top: 30px; /* Espace supplémentaire avant le sous-titre */
+}
+
+/* 
+Style pour les paragraphes <p> :
+- La taille de police est définie à 18px pour une lisibilité accrue.
+- Le margin-bottom ajoute un espace entre les paragraphes pour bien les séparer.
+- L'espacement des lignes est défini à 1.8 pour plus de confort de lecture.
+*/
+p {
+    font-size: 18px; /* Taille de police légèrement plus grande pour une meilleure lisibilité */
+    margin-bottom: 20px; /* Espace entre les paragraphes */
+    line-height: 1.8; /* Espacement des lignes amélioré pour un confort de lecture */
+}
+
+/* 
+Style pour les listes à puces <ul> :
+- Le fond est blanc pour faire ressortir la liste par rapport à la page.
+- Padding de 20px à l'intérieur pour ajouter de l'espace autour des éléments de la liste.
+- Les coins sont arrondis pour donner un aspect visuel agréable.
+- Une ombre légère (box-shadow) est ajoutée pour donner un effet de relief.
+- Un margin-bottom est ajouté pour séparer les listes du contenu suivant.
+*/
+ul {
+    background-color: #fff; /* Fond blanc pour bien distinguer la liste */
+    padding: 20px; /* Espace à l'intérieur de la liste */
+    border-radius: 5px; /* Coins arrondis pour un effet visuel agréable */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de relief */
+    margin-bottom: 20px; /* Espace sous la liste pour la séparer du reste */
+}
+
+/* 
+Style pour les éléments de liste <li> :
+- La taille de police des éléments de la liste est définie à 18px.
+- Un margin-bottom est ajouté pour espacer les éléments entre eux.
+*/
+li {
+    font-size: 18px; /* Taille de police des éléments de liste */
+    margin-bottom: 10px; /* Espace entre chaque élément de la liste */
+}
+
+/* 
+Style pour les balises HTML mises en valeur dans les listes :
+- La couleur bleue (#007BFF) est utilisée pour mettre en avant les balises HTML.
+- Elles sont également en gras pour être facilement identifiables.
+*/
+li strong {
+    color: #007BFF; /* Couleur bleue pour mettre en valeur les balises HTML */
+    font-weight: bold; /* Gras pour faire ressortir les balises HTML */
+}
+
+/* 
+Style pour le pied de page <footer> :
+- Le texte est centré pour donner un aspect équilibré.
+- Un margin-top ajoute un espace avant le pied de page pour le séparer du contenu précédent.
+- La taille de la police est réduite (16px) pour indiquer qu'il s'agit d'un contenu moins important.
+- La couleur est légèrement plus douce (#666) pour réduire son importance visuelle.
+*/
+footer {
+    text-align: center; /* Centre le texte dans le pied de page */
+    margin-top: 40px; /* Espace avant le pied de page */
+    font-size: 16px; /* Taille de texte plus petite pour le pied de page */
+    color: #666; /* Couleur de texte adoucie pour le pied de page */
+}
+
+/* 
+Style pour les conteneurs de section <section> :
+- Un margin-bottom de 40px est ajouté pour séparer visuellement chaque section.
+*/
+section {
+    margin-bottom: 40px; /* Espace entre chaque section */
+}
+
+/* 
+Style pour l'élément <main> :
+- Le fond est blanc pour bien faire ressortir le contenu principal.
+- Padding de 20px à l'intérieur pour aérer le texte.
+- Les coins arrondis (border-radius) donnent un aspect moderne.
+- Une ombre légère est ajoutée pour donner du relief au contenu principal.
+*/
+main {
+    background-color: #fff; /* Fond blanc pour faire ressortir le contenu principal */
+    padding: 20px; /* Espace autour du contenu */
+    border-radius: 8px; /* Coins arrondis pour un style moderne */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de relief */
+}
+
+/* 
+Style pour l'en-tête <header> :
+- Le margin-bottom ajoute un espace sous l'en-tête pour bien le séparer du contenu suivant.
+*/
+header {
+    margin-bottom: 40px; /* Espace sous l'en-tête */
+}

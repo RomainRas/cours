@@ -1,0 +1,94 @@
+/* 
+Style de base pour le corps de la page.
+- Police Arial pour une lisibilité simple.
+- Couleur de fond gris clair pour un confort visuel.
+- Padding pour espacer le contenu des bords de la page.
+*/
+body {
+    font-family: Arial, sans-serif; /* Police simple et lisible */
+    background-color: #f4f4f4; /* Fond gris clair */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 20px; /* Espacement autour du contenu principal */
+    color: #333; /* Couleur du texte principale en gris foncé */
+}
+
+/* 
+Style pour les titres principaux et secondaires :
+- Couleur sombre pour contraster avec le fond clair.
+- Padding pour espacer le texte des bords des éléments.
+*/
+h1, h2 {
+    color: #333; /* Couleur du texte sombre */
+    padding: 10px 0; /* Espacement vertical autour des titres */
+}
+
+/* 
+Style pour les sections :
+- Ajout d'un espace entre chaque section pour une meilleure lisibilité.
+*/
+section {
+    margin-bottom: 30px; /* Espace entre chaque section */
+}
+
+/* 
+Style pour les formulaires :
+- Espacement entre chaque champ pour aérer le formulaire.
+*/
+form {
+    background-color: #fff; /* Fond blanc pour mettre en valeur le formulaire */
+    padding: 20px; /* Espacement interne au formulaire */
+    border-radius: 5px; /* Coins légèrement arrondis pour un effet plus moderne */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour créer du relief */
+    margin-bottom: 20px; /* Espace sous le formulaire */
+}
+
+/* 
+Style pour les étiquettes <label> :
+- Ajout d'un espacement pour séparer l'étiquette du champ de saisie.
+*/
+label {
+    display: block; /* Les labels sont affichés sur une nouvelle ligne */
+    margin-bottom: 10px; /* Espacement sous chaque label */
+    font-weight: bold; /* Mettre les labels en gras pour les différencier */
+}
+
+/* 
+Style pour les champs de saisie <input> :
+- Ajout d'espacement interne et de bordures pour améliorer la lisibilité.
+*/
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 10px; /* Espacement interne pour rendre le champ confortable à utiliser */
+    margin-bottom: 20px; /* Espace sous chaque champ de saisie */
+    border: 1px solid #ccc; /* Bordure grise claire pour délimiter le champ */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    box-sizing: border-box; /* S'assure que le padding est inclus dans la largeur totale */
+}
+
+/* 
+Style pour le bouton d'envoi <button> :
+- Couleur de fond pour le rendre visuellement distinct.
+- Changement de couleur au survol pour un effet interactif.
+*/
+button {
+    background-color: #007BFF; /* Couleur de fond bleu pour le bouton */
+    color: white; /* Texte blanc pour contraste */
+    padding: 10px 15px; /* Espacement interne pour agrandir le bouton */
+    border: none; /* Suppression des bordures par défaut */
+    border-radius: 4px; /* Coins arrondis pour un style moderne */
+    cursor: pointer; /* Changement du curseur pour indiquer un élément cliquable */
+}
+
+button:hover {
+    background-color: #0056b3; /* Changement de la couleur de fond au survol */
+}
+
+/* 
+Style spécifique aux paragraphes <p> :
+- Espacement vertical pour aérer le texte.
+*/
+p {
+    margin-bottom: 20px; /* Espace sous chaque paragraphe pour aérer le contenu */
+}

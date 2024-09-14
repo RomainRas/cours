@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours sur les différents types de display en CSS</title>
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Cours sur les différents types de display en CSS</h1>
+
+    <!-- Introduction sur display -->
+    <p>
+        La propriété <strong>display</strong> en CSS contrôle la façon dont un élément HTML est affiché dans la page. 
+        Chaque type de display affecte le comportement de l'élément et la façon dont il interagit avec les autres éléments.
+        Voici les principaux types de display et leur comportement.
+    </p>
+
+    <!-- Exemple : display block -->
+    <section>
+        <h2>Display: block</h2>
+        <p>Les éléments avec <strong>display: block</strong> occupent toute la largeur disponible, chaque élément commence sur une nouvelle ligne.</p>
+        
+        <div class="block-example">
+            <div class="block-item">Élément 1 (block)</div>
+            <div class="block-item">Élément 2 (block)</div>
+            <div class="block-item">Élément 3 (block)</div>
+        </div>
+
+        <!-- Explication : 
+            Les éléments avec display: block prennent toute la largeur disponible et s'affichent l'un en dessous de l'autre. 
+            Par exemple, les balises <div>, <p>, <h1>, <section> sont des éléments block par défaut.
+        -->
+    </section>
+
+    <!-- Exemple : display inline -->
+    <section>
+        <h2>Display: inline</h2>
+        <p>Les éléments avec <strong>display: inline</strong> n'interrompent pas le flux du texte et ne commencent pas sur une nouvelle ligne.</p>
+        
+        <div class="inline-example">
+            <span class="inline-item">Élément 1 (inline)</span>
+            <span class="inline-item">Élément 2 (inline)</span>
+            <span class="inline-item">Élément 3 (inline)</span>
+        </div>
+
+        <!-- Explication :
+            Les éléments inline prennent seulement la place nécessaire pour leur contenu et restent dans le flux du texte.
+            Les balises comme <span>, <a>, <strong>, <em> sont des éléments inline par défaut. Ils ne forcent pas de retour à la ligne.
+        -->
+    </section>
+
+    <!-- Exemple : display inline-block -->
+    <section>
+        <h2>Display: inline-block</h2>
+        <p>Les éléments avec <strong>display: inline-block</strong> sont similaires aux éléments inline, mais ils respectent la hauteur et la largeur définies.</p>
+        
+        <div class="inline-block-example">
+            <span class="inline-block-item">Élément 1 (inline-block)</span>
+            <span class="inline-block-item">Élément 2 (inline-block)</span>
+            <span class="inline-block-item">Élément 3 (inline-block)</span>
+        </div>
+
+        <!-- Explication : 
+            Les éléments inline-block se comportent comme des éléments inline, mais peuvent avoir des dimensions spécifiques comme la largeur et la hauteur. 
+            Cela les rend pratiques pour des éléments nécessitant une structure plus complexe, comme des boutons ou des blocs imbriqués.
+        -->
+    </section>
+
+    <!-- Exemple : display none -->
+    <section>
+        <h2>Display: none</h2>
+        <p>Les éléments avec <strong>display: none</strong> sont complètement retirés du flux de la page, ils ne prennent aucune place visible.</p>
+        
+        <div class="none-example">
+            <div class="none-item">Cet élément est visible</div>
+            <div class="none-item hidden">Cet élément est masqué (display: none)</div>
+        </div>
+
+        <!-- Explication : 
+            Un élément avec display: none est complètement retiré de la mise en page. Il n'apparaît pas du tout à l'écran, et ne prend aucun espace. 
+            C'est très utile pour masquer temporairement un élément sans le supprimer du code HTML.
+        -->
+    </section>
+
+    <!-- Exemple : display grid -->
+    <section>
+        <h2>Display: grid</h2>
+        <p>Les éléments avec <strong>display: grid</strong> permettent de créer une mise en page en grille, avec des lignes et des colonnes.</p>
+        
+        <div class="grid-example">
+            <div class="grid-item">Élément 1 (grid)</div>
+            <div class="grid-item">Élément 2 (grid)</div>
+            <div class="grid-item">Élément 3 (grid)</div>
+            <div class="grid-item">Élément 4 (grid)</div>
+        </div>
+
+        <!-- Explication :
+            La propriété display: grid transforme le conteneur en une grille. Les éléments enfants se placent automatiquement dans les cellules. 
+            Les grilles permettent de créer des mises en page complexes avec des lignes et colonnes.
+        -->
+    </section>
+
+    <!-- Exemple : display table -->
+    <section>
+        <h2>Display: table</h2>
+        <p>Les éléments avec <strong>display: table</strong> imitent le comportement d'un tableau HTML.</p>
+        
+        <div class="table-example">
+            <div class="table-row">
+                <div class="table-cell">Cellule 1 (table)</div>
+                <div class="table-cell">Cellule 2 (table)</div>
+                <div class="table-cell">Cellule 3 (table)</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Cellule 4 (table)</div>
+                <div class="table-cell">Cellule 5 (table)</div>
+                <div class="table-cell">Cellule 6 (table)</div>
+            </div>
+        </div>
+
+        <!-- Explication : 
+            Display: table imite le comportement d'un tableau HTML, avec des éléments enfants se comportant comme des lignes (<tr>) et des cellules (<td>).
+        -->
+    </section>
+
+</body>
+</html>

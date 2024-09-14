@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+    <!DOCTYPE html> :
+    La première ligne de tout document HTML doit spécifier le type de document.
+    Ici, on utilise <!DOCTYPE html> pour indiquer qu'il s'agit d'une page HTML5.
+-->
+<html lang="fr">
+<!--
+    <html lang="fr"> :
+    La balise <html> est la racine de la page HTML. Tout le contenu doit être à l'intérieur de cette balise.
+    L'attribut "lang" indique la langue principale du document, ici "fr" pour le français.
+-->
+<head>
+    <meta charset="UTF-8">
+    <!--
+        <meta charset="UTF-8"> :
+        Définit l'encodage des caractères à UTF-8, ce qui permet d'afficher correctement tous les caractères, y compris les accents.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        <meta name="viewport"> :
+        Cette balise permet à la page d'être responsive, c'est-à-dire de s'adapter aux différentes tailles d'écran (ordinateurs, téléphones, tablettes).
+    -->
+
+    <title>Cours sur les méthodes GET et POST en HTML</title>
+    <!--
+        <title> :
+        Le contenu de la balise <title> s'affiche dans l'onglet du navigateur et est également utilisé par les moteurs de recherche pour identifier le contenu de la page.
+    -->
+
+    <!-- Lien vers la feuille de style (facultatif) -->
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <link rel="stylesheet"> :
+        Utilisé pour lier un fichier CSS externe afin de styliser la page HTML.
+    -->
+</head>
+
+<body>
+    <h1>Cours sur les méthodes GET et POST en HTML</h1>
+    <!--
+        <h1> :
+        La balise <h1> est utilisée pour afficher le titre principal de la page. Il ne doit y avoir qu'un seul <h1> par page.
+    -->
+
+    <!-- Introduction générale sur GET et POST -->
+    <p>
+        Les méthodes HTTP <strong>GET</strong> et <strong>POST</strong> permettent d'envoyer des données depuis un formulaire HTML vers un serveur. 
+        Chaque méthode a des usages spécifiques selon les besoins. La principale différence entre GET et POST est la façon dont elles transmettent les données.
+    </p>
+    <!--
+        <p> :
+        La balise <p> représente un paragraphe de texte. Elle est souvent utilisée pour afficher du contenu textuel dans une page HTML.
+    -->
+
+    <!-- Formulaire utilisant la méthode GET -->
+    <section>
+        <h2>Méthode GET</h2>
+        <!--
+            <h2> :
+            La balise <h2> représente un sous-titre, de niveau inférieur à <h1>. Elle peut être utilisée pour structurer les sections d'une page.
+        -->
+        <p>
+            La méthode <strong>GET</strong> envoie les données du formulaire en les ajoutant à l'URL sous la forme de paramètres. Les informations envoyées apparaissent donc dans la barre d'adresse du navigateur.
+        </p>
+        <!--
+            Explication du paragraphe :
+            La méthode GET ajoute les données directement à l'URL, ce qui signifie qu'elles sont visibles dans la barre d'adresse après la soumission du formulaire.
+        -->
+
+        <form action="" method="GET">
+            <!--
+                <form action="" method="GET"> :
+                Ce formulaire utilise la méthode GET. Les données envoyées seront visibles dans l'URL sous forme de paramètres (query string).
+                Exemple : ?name=John&email=john@example.com
+                L'attribut "action" est vide, donc les données seront soumises à la même page.
+            -->
+            <label for="name">Nom :</label>
+            <!--
+                <label for="name"> :
+                La balise <label> est utilisée pour associer un texte descriptif à un champ de formulaire.
+                L'attribut "for" doit correspondre à l'identifiant (id) de l'élément de formulaire associé.
+            -->
+            <input type="text" id="name" name="name" placeholder="Entrez votre nom">
+            <!--
+                <input type="text"> :
+                La balise <input> crée un champ de saisie. Le type "text" signifie que l'utilisateur peut entrer du texte.
+                L'attribut "name" spécifie le nom du champ, qui sera utilisé pour identifier les données envoyées dans l'URL.
+                L'attribut "placeholder" affiche un texte d'indication à l'intérieur du champ.
+            -->
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre email">
+            <!--
+                <input type="email"> :
+                Le type "email" crée un champ de saisie spécifique aux adresses e-mail. Il inclut une validation de format pour vérifier que l'utilisateur entre une adresse e-mail valide.
+            -->
+
+            <button type="submit">Envoyer (GET)</button>
+            <!--
+                <button type="submit"> :
+                Le bouton <button> est utilisé pour soumettre le formulaire. Lorsque l'utilisateur clique dessus, les données du formulaire sont envoyées selon la méthode spécifiée (ici GET).
+            -->
+        </form>
+
+        <!-- Explication complète de la méthode GET :
+             - La méthode GET envoie les données directement dans l'URL, visibles sous la forme de paramètres (ex. : ?name=John&email=john@example.com).
+             - Les données envoyées par GET sont visibles par tous, donc il est déconseillé d'utiliser GET pour des informations sensibles comme des mots de passe.
+             - GET est souvent utilisé pour des recherches, des filtres ou des formulaires où les données ne sont pas privées.
+             - Limitation : L'URL a une longueur maximale (~2048 caractères selon les navigateurs).
+        -->
+    </section>
+
+    <!-- Formulaire utilisant la méthode POST -->
+    <section>
+        <h2>Méthode POST</h2>
+        <p>
+            La méthode <strong>POST</strong> envoie les données du formulaire dans le corps de la requête HTTP, elles ne sont donc pas visibles dans l'URL. 
+            POST est généralement utilisé pour des informations sensibles ou des formulaires volumineux.
+        </p>
+        <!--
+            Explication du paragraphe :
+            Contrairement à GET, la méthode POST envoie les données dans le corps de la requête, ce qui signifie qu'elles ne sont pas visibles dans l'URL. 
+            Cela rend POST plus sécurisé pour envoyer des informations sensibles.
+        -->
+
+        <form action="" method="POST">
+            <!--
+                <form action="" method="POST"> :
+                Ce formulaire utilise la méthode POST. Contrairement à GET, les données ne seront pas visibles dans l'URL mais envoyées dans le corps de la requête HTTP.
+            -->
+
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur">
+            <!--
+                <input type="text"> :
+                Comme dans l'exemple GET, ce champ permet à l'utilisateur d'entrer du texte. Ici, il sert à entrer un nom d'utilisateur.
+            -->
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe">
+            <!--
+                <input type="password"> :
+                Le type "password" masque les caractères saisis par l'utilisateur pour des raisons de confidentialité.
+            -->
+
+            <button type="submit">Envoyer (POST)</button>
+            <!--
+                <button type="submit"> :
+                Le bouton envoie les données via la méthode POST lorsque l'utilisateur soumet le formulaire.
+            -->
+        </form>
+
+        <!-- Explication complète de la méthode POST :
+             - La méthode POST envoie les données dans le corps de la requête HTTP, ce qui signifie qu'elles ne sont pas visibles dans l'URL.
+             - POST est plus sécurisé que GET pour envoyer des informations sensibles comme des mots de passe, car elles ne sont pas exposées dans l'URL.
+             - Il n'y a pas de limite de taille pour les données envoyées par POST, contrairement à GET.
+             - POST est souvent utilisé pour des formulaires de connexion, d'inscription ou d'envoi de fichiers.
+        -->
+    </section>
+
+</body>
+</html>

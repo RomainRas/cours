@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemples Complets Flexbox</title>
+    <!-- Lien vers la feuille de style CSS externe -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Exemples d'Applications Flexbox</h1>
+
+    <!-- Section Flex-Direction -->
+    <div class="example-container">
+        <h2>1. Flex-Direction</h2>
+        <p>La propriété <strong>flex-direction</strong> définit l'orientation des éléments dans le conteneur flex.</p>
+
+        <p><strong>Exemple avec flex-direction: row (par défaut) :</strong></p>
+        <div class="example">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec flex-direction: row-reverse :</strong></p>
+        <div class="example row-reverse">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec flex-direction: column :</strong></p>
+        <div class="example column">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec flex-direction: column-reverse :</strong></p>
+        <div class="example column-reverse">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </div>
+
+    <!-- Section Flex-Wrap -->
+    <div class="example-container">
+        <h2>2. Flex-Wrap</h2>
+        <p>La propriété <strong>flex-wrap</strong> contrôle si les éléments restent sur une seule ligne ou passent à la ligne suivante.</p>
+
+        <p><strong>Exemple avec flex-wrap: nowrap (par défaut) :</strong></p>
+        <div class="example">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+
+        <p><strong>Exemple avec flex-wrap: wrap :</strong></p>
+        <div class="example wrap">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+
+        <p><strong>Exemple avec flex-wrap: wrap-reverse :</strong></p>
+        <div class="example wrap-reverse">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+    </div>
+
+    <!-- Section Justify-Content -->
+    <div class="example-container">
+        <h2>3. Justify-Content</h2>
+        <p>La propriété <strong>justify-content</strong> gère l'espacement entre les éléments sur l'axe principal (horizontal).</p>
+
+        <p><strong>Exemple avec justify-content: flex-start (par défaut) :</strong></p>
+        <div class="example flex-start">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec justify-content: flex-end :</strong></p>
+        <div class="example flex-end">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec justify-content: center :</strong></p>
+        <div class="example justify-center">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec justify-content: space-between :</strong></p>
+        <div class="example space-between">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec justify-content: space-around :</strong></p>
+        <div class="example space-around">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+
+        <p><strong>Exemple avec justify-content: space-evenly :</strong></p>
+        <div class="example space-evenly">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </div>
+
+    <!-- Section Align-Items -->
+    <div class="example-container">
+        <h2>4. Align-Items</h2>
+        <p>La propriété <strong>align-items</strong> gère l'alignement des éléments sur l'axe secondaire (vertical).</p>
+
+        <p><strong>Exemple avec align-items: flex-start :</strong></p>
+        <div class="example align-flex-start">
+            <div class="flex-item flex-item-large">1</div>
+            <div class="flex-item flex-item-large">2</div>
+            <div class="flex-item flex-item-large">3</div>
+        </div>
+
+        <p><strong>Exemple avec align-items: flex-end :</strong></p>
+        <div class="example align-flex-end">
+            <div class="flex-item flex-item-large">1</div>
+            <div class="flex-item flex-item-large">2</div>
+            <div class="flex-item flex-item-large">3</div>
+        </div>
+
+        <p><strong>Exemple avec align-items: center :</strong></p>
+        <div class="example align-center">
+            <div class="flex-item flex-item-large">1</div>
+            <div class="flex-item flex-item-large">2</div>
+            <div class="flex-item flex-item-large">3</div>
+        </div>
+
+        <p><strong>Exemple avec align-items: baseline :</strong></p>
+        <div class="example align-baseline">
+            <div class="flex-item flex-item-large">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item flex-item-large">3</div>
+        </div>
+
+        <p><strong>Exemple avec align-items: stretch (par défaut) :</strong></p>
+        <div class="example align-stretch">
+            <div class="flex-item flex-item-large">1</div>
+            <div class="flex-item flex-item-large">2</div>
+            <div class="flex-item flex-item-large">3</div>
+        </div>
+    </div>
+
+    <!-- Section Align-Content -->
+    <div class="example-container">
+        <h2>5. Align-Content</h2>
+        <p>La propriété <strong>align-content</strong> contrôle l'espacement entre les lignes dans un conteneur multi-lignes.</p>
+
+        <p><strong>Exemple avec align-content: flex-start :</strong></p>
+        <div class="example wrap align-content-flex-start">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+
+        <p><strong>Exemple avec align-content: flex-end :</strong></p>
+        <div class="example wrap align-content-flex-end">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+
+        <p><strong>Exemple avec align-content: center :</strong></p>
+        <div class="example wrap align-content-center">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+
+        <p><strong>Exemple avec align-content: space-between :</strong></p>
+        <div class="example wrap align-content-space-between">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+
+        <p><strong>Exemple avec align-content: space-around :</strong></p>
+        <div class="example wrap align-content-space-around">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+
+        <p><strong>Exemple avec align-content: stretch (par défaut) :</strong></p>
+        <div class="example wrap align-content-stretch">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+    </div>
+
+</body>
+</html>

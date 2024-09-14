@@ -1,0 +1,255 @@
+/* 
+Style de base pour la page
+Le body est configuré avec une police générale, un fond gris clair, et des marges pour l'espacement.
+*/
+body {
+    font-family: Arial, sans-serif; /* Définit la police utilisée */
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    line-height: 1.6; /* Espacement vertical entre les lignes */
+}
+
+/* Styles pour les titres de section (h1, h2) */
+h1, h2 {
+    background-color: #333; /* Fond gris foncé pour les titres */
+    color: white; /* Texte en blanc pour contraster avec le fond */
+    padding: 10px;
+    border-radius: 5px; /* Arrondit légèrement les bords */
+}
+
+/* Conteneur pour chaque exemple */
+.example-container {
+    margin-bottom: 40px; /* Espacement entre chaque exemple */
+}
+
+/* 
+Classe de base pour les exemples Flexbox
+Cette classe configure un conteneur Flexbox avec l'affichage de base flex.
+Les éléments enfants sont répartis selon la configuration par défaut (row).
+*/
+.example {
+    background-color: #e4e4e4; /* Fond gris clair pour les exemples */
+    padding: 10px;
+    display: flex; /* Active Flexbox pour ce conteneur */
+    margin-top: 10px;
+    justify-content: space-around; /* Espace égal autour des éléments */
+    border-radius: 5px; /* Arrondit légèrement les bords */
+    flex-wrap: nowrap; /* Par défaut, les éléments restent sur une seule ligne */
+    height: 200px; /* Hauteur du conteneur pour montrer l'effet sur align-items */
+}
+
+/* 
+Classe pour les éléments enfants du conteneur Flexbox
+Ces éléments sont centrés, ont un fond vert et un texte blanc.
+*/
+.flex-item {
+    background-color: #4CAF50; /* Fond vert */
+    color: white; /* Texte en blanc */
+    padding: 20px;
+    text-align: center; /* Texte centré */
+    border-radius: 5px; /* Arrondit légèrement les bords */
+    width: 100px; /* Largeur fixe de 100px */
+    height: 50px; /* Hauteur fixe de 50px */
+}
+
+/* Classe spécifique pour les éléments plus grands, utilisée dans align-items */
+.flex-item-large {
+    height: 150px; /* Hauteur plus grande pour voir l'alignement vertical */
+}
+
+/* ----------------- */
+/* flex-direction */
+/* ----------------- */
+
+/* 
+Exemple de flex-direction : row-reverse
+Les éléments sont alignés horizontalement, mais dans l'ordre inverse.
+*/
+.row-reverse {
+    flex-direction: row-reverse; /* Inverse l'ordre des éléments horizontalement */
+}
+
+/* 
+Exemple de flex-direction : column
+Les éléments sont alignés verticalement (de haut en bas).
+*/
+.column {
+    flex-direction: column; /* Aligne les éléments verticalement */
+}
+
+/* 
+Exemple de flex-direction : column-reverse
+Les éléments sont alignés verticalement, mais de bas en haut.
+*/
+.column-reverse {
+    flex-direction: column-reverse; /* Inverse l'ordre des éléments verticalement */
+}
+
+/* ----------------- */
+/* flex-wrap */
+/* ----------------- */
+
+/* 
+Exemple de flex-wrap : wrap
+Les éléments sont répartis sur plusieurs lignes si l'espace est insuffisant.
+*/
+.wrap {
+    flex-wrap: wrap; /* Les éléments passent à la ligne suivante si nécessaire */
+}
+
+/* 
+Exemple de flex-wrap : wrap-reverse
+Les éléments passent à la ligne suivante, mais les nouvelles lignes apparaissent en haut.
+*/
+.wrap-reverse {
+    flex-wrap: wrap-reverse; /* Les lignes se répartissent, mais en sens inverse */
+}
+
+/* ----------------- */
+/* justify-content */
+/* ----------------- */
+
+/* 
+Exemple de justify-content : flex-start (par défaut)
+Les éléments sont alignés au début du conteneur Flexbox.
+*/
+.flex-start {
+    justify-content: flex-start; /* Aligne les éléments au début du conteneur (gauche) */
+}
+
+/* 
+Exemple de justify-content : flex-end
+Les éléments sont alignés à la fin du conteneur Flexbox.
+*/
+.flex-end {
+    justify-content: flex-end; /* Aligne les éléments à la fin du conteneur (droite) */
+}
+
+/* 
+Exemple de justify-content : center
+Les éléments sont centrés sur l'axe principal.
+*/
+.justify-center {
+    justify-content: center; /* Centre les éléments sur l'axe principal */
+}
+
+/* 
+Exemple de justify-content : space-between
+Les espaces entre les éléments sont égaux, mais il n'y a pas d'espace avant le premier élément ou après le dernier.
+*/
+.space-between {
+    justify-content: space-between; /* Espace égal entre les éléments, aucun espace aux extrémités */
+}
+
+/* 
+Exemple de justify-content : space-around
+Les espaces autour des éléments (avant le premier et après le dernier) sont égaux.
+*/
+.space-around {
+    justify-content: space-around; /* Espace égal autour des éléments, incluant les côtés extérieurs */
+}
+
+/* 
+Exemple de justify-content : space-evenly
+Les espaces entre les éléments et les côtés extérieurs du conteneur sont égaux.
+*/
+.space-evenly {
+    justify-content: space-evenly; /* Distribution totalement égale des espaces entre les éléments */
+}
+
+/* ----------------- */
+/* align-items */
+/* ----------------- */
+
+/* 
+Exemple de align-items : flex-start
+Les éléments sont alignés en haut du conteneur (axe secondaire).
+*/
+.align-flex-start {
+    align-items: flex-start; /* Aligne les éléments en haut du conteneur */
+}
+
+/* 
+Exemple de align-items : flex-end
+Les éléments sont alignés en bas du conteneur (axe secondaire).
+*/
+.align-flex-end {
+    align-items: flex-end; /* Aligne les éléments en bas du conteneur */
+}
+
+/* 
+Exemple de align-items : center
+Les éléments sont centrés verticalement dans le conteneur.
+*/
+.align-center {
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+/* 
+Exemple de align-items : baseline
+Les éléments sont alignés selon leur ligne de base (ligne de texte).
+*/
+.align-baseline {
+    align-items: baseline; /* Aligne les éléments selon leur ligne de base de texte */
+}
+
+/* 
+Exemple de align-items : stretch (par défaut)
+Les éléments s'étendent pour remplir toute la hauteur du conteneur.
+*/
+.align-stretch {
+    align-items: stretch; /* Étire les éléments pour occuper l'espace vertical disponible */
+}
+
+/* ----------------- */
+/* align-content */
+/* ----------------- */
+
+/* 
+Exemple de align-content : flex-start
+Les lignes sont alignées en haut du conteneur multi-lignes.
+*/
+.align-content-flex-start {
+    align-content: flex-start; /* Aligne les lignes en haut du conteneur */
+}
+
+/* 
+Exemple de align-content : flex-end
+Les lignes sont alignées en bas du conteneur multi-lignes.
+*/
+.align-content-flex-end {
+    align-content: flex-end; /* Aligne les lignes en bas du conteneur */
+}
+
+/* 
+Exemple de align-content : center
+Les lignes sont centrées verticalement dans le conteneur multi-lignes.
+*/
+.align-content-center {
+    align-content: center; /* Centre les lignes verticalement dans le conteneur */
+}
+
+/* 
+Exemple de align-content : space-between
+Les lignes sont réparties avec des espaces égaux entre elles, sans espace en haut et en bas.
+*/
+.align-content-space-between {
+    align-content: space-between; /* Espacement égal entre les lignes */
+}
+
+/* 
+Exemple de align-content : space-around
+Les lignes sont réparties avec des espaces égaux autour d'elles, incluant les côtés extérieurs.
+*/
+.align-content-space-around {
+    align-content: space-around; /* Espaces égaux autour de chaque ligne */
+}
+
+/* 
+Exemple de align-content : stretch (par défaut)
+Les lignes s'étendent pour remplir tout l'espace vertical disponible.
+*/
+.align-content-stretch {
+    align-content: stretch; /* Étire les lignes pour occuper tout l'espace disponible */
+}

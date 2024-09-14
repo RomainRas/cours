@@ -1,0 +1,64 @@
+/* 
+Style général pour le corps de la page :
+- On augmente légèrement la taille de la police pour une meilleure lisibilité.
+- On définit une couleur de fond claire et une marge nulle.
+*/
+body {
+    font-size: 1.2rem; /* Taille de police augmentée pour plus de lisibilité */
+    background-color: #f9f9f9; /* Couleur de fond gris clair */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 20px; /* Ajout de padding pour espacer le contenu du bord de la page */
+    font-family: Arial, sans-serif; /* Utilisation d'une police simple et lisible */
+}
+
+/* 
+Style pour les tableaux :
+- Ombre légère autour du tableau pour créer un effet de relief.
+- Couleur de fond légèrement transparente pour mieux distinguer les éléments.
+*/
+table {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du tableau */
+    background: rgba(0, 0, 0, 0.05); /* Fond légèrement transparent pour le tableau */
+    margin-bottom: 20px; /* Espace entre chaque tableau */
+    width: 100%; /* Le tableau prend toute la largeur disponible */
+    border-collapse: collapse; /* Fusionne les bordures des cellules */
+}
+
+/* 
+Style pour les en-têtes de tableau (<th>) et les cellules (<td>) :
+- Ajout de padding pour un texte plus espacé.
+- Couleur de fond différente pour différencier les cellules d'en-tête.
+*/
+th, td {
+    padding: 10px; /* Espacement interne pour rendre les cellules plus lisibles */
+    text-align: left; /* Alignement du texte à gauche */
+    border: 1px solid #ccc; /* Bordure grise autour des cellules */
+}
+
+/* 
+Style spécifique pour les cellules d'en-tête (<th>) :
+- Le fond est semi-transparent pour les différencier des cellules de données.
+*/
+th {
+    background: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour les en-têtes */
+    font-weight: bold; /* Texte en gras pour indiquer que ce sont des en-têtes */
+}
+
+/* 
+Style spécifique pour les cellules de données (<td>) :
+- Le fond est blanc.
+*/
+td {
+    background: #fff; /* Fond blanc pour les cellules de données */
+}
+
+/* 
+Style pour la légende du tableau (<caption>) :
+- On place la légende au-dessus du tableau et on la stylise pour qu'elle soit bien visible.
+*/
+caption {
+    caption-side: top; /* La légende est placée en haut du tableau */
+    font-size: 1.4rem; /* Taille de la police augmentée pour la légende */
+    font-weight: bold; /* Texte en gras pour la légende */
+    margin-bottom: 10px; /* Espacement entre la légende et le tableau */
+}

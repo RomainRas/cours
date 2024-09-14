@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- 
+<!DOCTYPE html> :
+Cette déclaration informe le navigateur que le document utilise HTML5. 
+Elle doit être placée en première ligne du fichier HTML pour garantir un rendu correct du contenu.
+-->
+
+<html lang="fr">
+<!-- 
+<html lang="fr"> :
+L'élément <html> est l'élément racine qui contient tout le contenu d'une page HTML. 
+L'attribut "lang" indique la langue principale du document. Ici, "fr" pour français.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+    <meta charset="UTF-8"> :
+    Cette balise définit l'encodage des caractères utilisés dans la page. 
+    UTF-8 est l'encodage recommandé, car il permet de représenter une vaste gamme de caractères, y compris les accents et symboles internationaux.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    <meta name="viewport"> :
+    Cette balise permet de rendre la page responsive, c'est-à-dire qu'elle s'adapte aux différentes tailles d'écran (ordinateurs, tablettes, smartphones).
+    L'attribut "width=device-width" indique que la largeur de la page doit correspondre à la largeur de l'appareil. 
+    "initial-scale=1.0" empêche un zoom initial.
+    -->
+
+    <title>Lexique de Base : Structure HTML</title>
+    <!-- 
+    <title> :
+    La balise <title> définit le titre de la page, qui s'affiche dans l'onglet du navigateur. 
+    Ce titre est également utilisé par les moteurs de recherche pour référencer la page.
+    -->
+
+    <link rel="stylesheet" href="./style/lexique_style.css">
+    <!-- 
+    <link> :
+    Cette balise lie la page HTML à des fichiers externes, comme des feuilles de style CSS.
+    Ici, elle est utilisée pour lier un fichier "style.css" qui contient le design de la page.
+    -->
+</head>
+
+<body>
+    <!-- 
+    <body> :
+    L'élément <body> contient tout le contenu visible de la page HTML. 
+    C'est à l'intérieur de cette balise que l'on place les titres, paragraphes, images, et autres éléments.
+    -->
+
+    <header>
+        <!-- 
+        <header> :
+        L'élément <header> est utilisé pour regrouper le contenu d'en-tête de la page, tel que le titre, le logo ou le menu de navigation.
+        -->
+
+        <h1>Lexique de Base : Structure HTML</h1>
+        <!-- 
+        <h1> :
+        L'élément <h1> représente le titre principal de la page. 
+        Chaque page HTML ne doit contenir qu'un seul <h1>, pour indiquer clairement son contenu principal.
+        -->
+    </header>
+
+    <main>
+        <!-- 
+        <main> :
+        L'élément <main> contient le contenu principal de la page. Il ne doit y avoir qu'un seul élément <main> par page,
+        et il doit contenir les informations les plus importantes de la page, à l'exclusion des éléments répétitifs comme l'en-tête ou le pied de page.
+        -->
+
+        <section>
+            <!-- 
+            <section> :
+            L'élément <section> est utilisé pour structurer le contenu en parties distinctes. 
+            Chaque section regroupe des éléments connexes ou partageant un même thème.
+            -->
+
+            <h2>Les éléments de base en HTML</h2>
+            <!-- 
+            <h2> :
+            L'élément <h2> est un titre de deuxième niveau. Il est utilisé pour introduire une nouvelle section de contenu. 
+            Il est moins important que <h1>, mais reste un titre majeur dans la hiérarchie des titres.
+            -->
+
+            <ul>
+                <!-- 
+                <ul> :
+                L'élément <ul> crée une liste à puces. Chaque élément de la liste est défini par une balise <li> (list item).
+                -->
+
+                <li><strong>&lt;!DOCTYPE html&gt;</strong> : Indique que le document utilise HTML5.</li>
+                <!-- 
+                <li> :
+                Chaque élément d'une liste est représenté par <li>, ici il s'agit d'une explication sur la déclaration <!DOCTYPE html>.
+                -->
+
+                <li><strong>&lt;html lang="fr"&gt;</strong> : Élément racine du document avec l'attribut "lang" pour spécifier la langue du contenu.</li>
+                <!-- 
+                Cette liste <li> explique le rôle de l'élément <html> et son attribut "lang".
+                -->
+
+                <li><strong>&lt;head&gt;</strong> : Contient les métadonnées du document, comme l'encodage et les liens vers des ressources externes.</li>
+                <!-- 
+                Cette ligne décrit l'élément <head>, qui regroupe les informations non visibles pour l'utilisateur, mais essentielles pour les navigateurs.
+                -->
+
+                <li><strong>&lt;body&gt;</strong> : Contient tout le contenu visible de la page HTML.</li>
+                <!-- 
+                Cette entrée <li> explique que <body> est la balise qui contient tout ce que l'utilisateur verra à l'écran.
+                -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Les éléments structurels en HTML</h2>
+            <!-- 
+            Cette section contient des explications sur les éléments structurels qui organisent la page HTML.
+            -->
+
+            <ul>
+                <li><strong>&lt;header&gt;</strong> : Utilisé pour regrouper les éléments d'en-tête de la page, comme le logo et le menu de navigation.</li>
+                <!-- 
+                L'élément <header> est utilisé pour structurer l'en-tête de la page. Il contient souvent des informations de navigation ou de titre.
+                -->
+
+                <li><strong>&lt;main&gt;</strong> : Section principale du contenu de la page, unique pour chaque page.</li>
+                <!-- 
+                L'élément <main> contient le contenu principal de la page. Il ne doit pas être utilisé pour des éléments comme des menus ou pieds de page.
+                -->
+
+                <li><strong>&lt;section&gt;</strong> : Utilisé pour structurer le contenu en parties distinctes.</li>
+                <!-- 
+                <section> regroupe les parties du contenu qui sont logiquement reliées entre elles. C'est un moyen d'organiser des sections de texte ou de données.
+                -->
+
+                <li><strong>&lt;footer&gt;</strong> : Contient le contenu de bas de page, comme les informations de contact et les droits d'auteur.</li>
+                <!-- 
+                L'élément <footer> est utilisé pour structurer le bas de la page. Il contient généralement des informations comme les mentions légales ou les contacts.
+                -->
+
+                <li><strong>&lt;link&gt;</strong> : Utilisé pour lier des fichiers externes, comme des feuilles de style CSS.</li>
+                <!-- 
+                L'élément <link> sert à connecter des ressources externes à la page, comme des fichiers CSS ou des polices.
+                -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Autres éléments HTML courants</h2>
+            <!-- 
+            Cette section regroupe les éléments HTML les plus utilisés et leur rôle dans une page web.
+            -->
+
+            <ul>
+                <li><strong>&lt;h1&gt; à &lt;h6&gt;</strong> : Titres allant du plus important (<h1>) au moins important (<h6>).</li>
+                <!-- 
+                <h1> à <h6> sont des éléments de titre hiérarchisés. Le titre <h1> est le plus important, <h6> est le moins important.
+                -->
+
+                <li><strong>&lt;p&gt;</strong> : Élément pour représenter un paragraphe de texte.</li>
+                <!-- 
+                <p> est utilisé pour structurer des blocs de texte en paragraphes. C'est l'un des éléments les plus courants en HTML.
+                -->
+
+                <li><strong>&lt;ul&gt;</strong> et <strong>&lt;li&gt;</strong> : Utilisés pour créer une liste à puces, avec chaque élément défini par <li>.</li>
+                <!-- 
+                <ul> crée une liste non ordonnée (à puces), et chaque élément de la liste est défini par <li>.
+                -->
+
+                <li><strong>&lt;a&gt;</strong> : Utilisé pour créer un lien hypertexte. L'attribut "href" indique la destination du lien.</li>
+                <!-- 
+                <a> est utilisé pour créer des liens hypertextes. L'attribut href spécifie l'URL de destination du lien.
+                -->
+
+                <li><strong>&lt;img&gt;</strong> : Utilisé pour insérer une image dans la page. L'attribut "src" définit l'URL de l'image et "alt" fournit une description textuelle.</li>
+                <!-- 
+                <img> est utilisé pour insérer des images dans une page HTML. L'attribut src définit la source de l'image, et alt fournit un texte alternatif pour les utilisateurs ou si l'image ne se charge pas.
+                -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <!-- 
+        <footer> :
+        L'élément <footer> est utilisé pour regrouper le contenu de bas de page, comme les informations de copyright ou les liens supplémentaires.
+        -->
+
+        <p>&copy; 2024 Mon Site Web - Tous droits réservés.</p>
+        <!-- 
+        <p> :
+        L'élément <p> représente un paragraphe. Ici, il est utilisé pour afficher les droits d'auteur dans le pied de page.
+        -->
+    </footer>
+
+</body>
+</html>

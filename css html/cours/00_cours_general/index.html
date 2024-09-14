@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- 
+    <!DOCTYPE html> : Définit que le document est un fichier HTML5. 
+-->
+<html lang="fr">
+<!-- 
+    <html lang="fr"> : La balise racine du document HTML. L'attribut "lang" indique que la langue principale est le français.
+-->
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+        <meta charset="UTF-8"> : Définit l'encodage du document à UTF-8, permettant de supporter les caractères spéciaux, y compris les accents.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        <meta name="viewport"> : Assure que la page est responsive, c'est-à-dire qu'elle s'adapte aux différentes tailles d'écran (mobile, tablette, desktop).
+    -->
+
+    <title>Cours Web : Images, Projets, et Gestion Responsive</title>
+    <!-- 
+        <title> : Définit le titre qui s'affiche dans l'onglet du navigateur.
+    -->
+
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+        <link rel="stylesheet"> : Relie ce document HTML à une feuille de style externe appelée "style.css".
+    -->
+</head>
+
+<body>
+    <h1>Cours Web : Les images, la gestion de projet, et le responsive design</h1>
+    <!-- 
+        <h1> : Titre principal de la page. Il est important d'avoir un seul <h1> par page pour respecter les standards SEO.
+    -->
+
+    <!-- Section sur les différents types d'images -->
+    <section>
+        <h2>Les différents types d'images utilisables</h2>
+        <p>Voici les types d'images que vous pouvez utiliser sur le web :</p>
+
+        <!-- Détails sur le format SVG -->
+        <h3>SVG (Scalable Vector Graphics)</h3>
+        <ul>
+            <li>Type : Vectoriel</li>
+            <li>Utilisation : Graphiques, logos, icônes</li>
+            <li>Qualité : Toujours nette, même en zoomant</li>
+            <li>Taille de fichier : Variable, souvent petite pour des graphiques simples</li>
+            <li>Édition : Facile à modifier</li>
+            <li>Transparence : Supportée</li>
+            <li>Animations : Possible</li>
+        </ul>
+
+        <!-- Détails sur le format JPEG -->
+        <h3>JPEG (Joint Photographic Experts Group)</h3>
+        <ul>
+            <li>Type : Bitmap</li>
+            <li>Utilisation : Photographies</li>
+            <li>Qualité : Perte de qualité avec la compression</li>
+            <li>Taille de fichier : Plus petite grâce à la compression</li>
+            <li>Transparence : Non supportée</li>
+        </ul>
+
+        <!-- Détails sur le format PNG -->
+        <h3>PNG (Portable Network Graphics)</h3>
+        <ul>
+            <li>Type : Bitmap avec compression sans perte</li>
+            <li>Utilisation : Idéal pour les images nécessitant de la transparence</li>
+            <li>Qualité : Maintenue, quelle que soit la compression</li>
+            <li>Transparence : Supportée (canal alpha)</li>
+        </ul>
+    </section>
+
+    <!-- Section sur les étapes de la création de projet -->
+    <section>
+        <h2>Étapes de la création de projet et gestion client</h2>
+
+        <h3>Délais de projet</h3>
+        <p>Durée estimée : 15 jours de travail effectifs. Il est important de bien quantifier chaque journée de travail.</p>
+
+        <h3>Rencontre avec les parties prenantes</h3>
+        <p>Organiser des réunions pour recueillir les besoins et attentes des utilisateurs, des équipes internes et des partenaires.</p>
+
+        <h3>Création de l'arborescence du site</h3>
+        <p>Il est essentiel de structurer le contenu du site de manière logique et intuitive pour faciliter la navigation des utilisateurs.</p>
+
+        <h3>Conception UX</h3>
+        <p>L'objectif est de créer une interface simple à utiliser, garantissant une bonne expérience utilisateur.</p>
+    </section>
+
+    <!-- Section sur les concepts techniques -->
+    <section>
+        <h2>Concepts techniques en web design</h2>
+
+        <!-- Gestion des chemins d'accès -->
+        <h3>Gestion des chemins d'accès</h3>
+        <p>Il est important de différencier les <strong>chemins absolus</strong> des <strong>chemins relatifs</strong> :</p>
+        <ul>
+            <li>Chemin absolu : URL complète, par exemple : <a href="https://www.example.com/page2">Page 2</a></li>
+            <li>Chemin relatif : Utilisé pour les liens internes, par exemple : <a href="page2/">Page 2</a></li>
+        </ul>
+
+        <!-- Gestion des unités de mesure -->
+        <h3>Optimisation des unités de mesure pour le responsive design</h3>
+        <p>
+            Utilisez des unités comme <strong>%, em, rem, vh, vw</strong> pour garantir que le design s'adapte aux différents types d'écrans.
+        </p>
+    </section>
+
+    <!-- Section Glossaire -->
+    <section>
+        <h2>Glossaire des unités de mesure</h2>
+        <ul>
+            <li><strong>px</strong> : Pixel, unité absolue</li>
+            <li><strong>%</strong> : Unité relative à l'élément parent</li>
+            <li><strong>em</strong> : Unité relative à la taille de l'élément parent</li>
+            <li><strong>rem</strong> : Unité relative à l'élément racine (root)</li>
+            <li><strong>vh</strong> : Viewport height, 1vh = 1% de la hauteur de la fenêtre</li>
+            <li><strong>vw</strong> : Viewport width, 1vw = 1% de la largeur de la fenêtre</li>
+        </ul>
+    </section>
+</body>
+</html>

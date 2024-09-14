@@ -1,0 +1,125 @@
+/* 
+Style de base pour la page entière :
+- Utilisation d'une police simple et lisible (Arial).
+- Suppression des marges par défaut du navigateur et ajout de padding pour aérer le contenu.
+- Fond gris clair (#f4f4f4) pour rendre la lecture plus agréable.
+- Espacement entre les lignes pour une meilleure lisibilité.
+*/
+body {
+    font-family: Arial, sans-serif; /* Police lisible et simple */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 20px; /* Padding général pour espacer le contenu des bords */
+    background-color: #f4f4f4; /* Couleur de fond gris clair */
+    line-height: 1.6; /* Espacement des lignes pour faciliter la lecture */
+    color: #333; /* Couleur principale du texte */
+}
+
+/* 
+Style pour les en-têtes de la page <header> :
+- Fond sombre pour contraster avec le texte blanc.
+- Le texte est centré avec du padding pour plus de lisibilité.
+*/
+header {
+    background-color: #333; /* Couleur de fond sombre */
+    color: white; /* Texte blanc pour contraste élevé */
+    padding: 20px; /* Padding pour aérer l'en-tête */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Espacer l'en-tête du reste du contenu */
+}
+
+/* 
+Style pour les titres principaux <h1> :
+- Taille de police plus grande pour indiquer l'importance du titre.
+*/
+h1 {
+    font-size: 32px; /* Taille de police pour le titre principal */
+    margin: 0; /* Suppression des marges par défaut */
+}
+
+/* 
+Style pour les sous-titres <h2> :
+- Taille de police légèrement plus petite pour marquer la hiérarchie du contenu.
+- Un espace est ajouté avant chaque sous-titre pour mieux séparer les sections.
+*/
+h2 {
+    font-size: 24px; /* Taille de police pour les sous-titres */
+    margin-top: 30px; /* Espace avant chaque sous-titre */
+    color: #007BFF; /* Couleur bleu pour différencier les sous-titres */
+}
+
+/* 
+Style pour les paragraphes <p> :
+- Taille de police augmentée pour une meilleure lisibilité.
+- Espacement sous chaque paragraphe pour aérer le texte.
+*/
+p {
+    font-size: 18px; /* Taille de police légèrement plus grande pour une meilleure lecture */
+    margin-bottom: 20px; /* Espace entre les paragraphes */
+}
+
+/* 
+Style pour les listes à puces <ul> :
+- Le fond blanc permet de bien distinguer la liste du reste de la page.
+- Le padding interne ajoute de l'espace autour des éléments de la liste.
+- Ombre légère pour donner un effet visuel plus attrayant.
+*/
+ul {
+    background-color: #fff; /* Fond blanc pour faire ressortir la liste */
+    padding: 20px; /* Espace intérieur autour des éléments de la liste */
+    border-radius: 5px; /* Coins arrondis pour un effet visuel agréable */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour créer du relief */
+    margin-bottom: 20px; /* Espacement sous la liste */
+}
+
+/* 
+Style pour les éléments de liste <li> :
+- La taille de la police est définie pour une lecture facile.
+- Espacement entre chaque élément de liste.
+*/
+li {
+    font-size: 18px; /* Taille de la police pour les éléments de la liste */
+    margin-bottom: 10px; /* Espace entre les éléments */
+}
+
+/* 
+Mise en forme des balises HTML dans les listes :
+- Couleur bleue pour les balises HTML afin de les rendre plus visibles.
+- Elles sont également en gras pour attirer l'attention.
+*/
+li strong {
+    color: #007BFF; /* Couleur bleue pour mettre en valeur les balises HTML */
+    font-weight: bold; /* Texte en gras pour mettre en évidence */
+}
+
+/* 
+Style pour le pied de page <footer> :
+- Le texte est centré avec une taille de police réduite pour indiquer son importance secondaire.
+- Espacement supérieur pour bien séparer le pied de page du reste du contenu.
+*/
+footer {
+    text-align: center; /* Centre le texte dans le pied de page */
+    margin-top: 40px; /* Espace avant le pied de page */
+    font-size: 14px; /* Taille de texte plus petite pour le pied de page */
+    color: #666; /* Couleur grise adoucie pour le texte du pied de page */
+}
+
+/* 
+Style pour l'élément <main> :
+- Le contenu principal a un fond blanc pour le distinguer du reste de la page.
+- Padding et coins arrondis pour une présentation visuellement agréable.
+- Ombre légère pour donner du relief au contenu principal.
+*/
+main {
+    background-color: #fff; /* Fond blanc pour le contenu principal */
+    padding: 20px; /* Espace autour du contenu principal */
+    border-radius: 8px; /* Coins arrondis pour un style moderne */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ombre légère pour ajouter du relief */
+}
+
+/* 
+Style pour les sections <section> :
+- Chaque section est bien espacée par rapport aux autres pour mieux organiser le contenu.
+*/
+section {
+    margin-bottom: 40px; /* Espace entre chaque section */
+}

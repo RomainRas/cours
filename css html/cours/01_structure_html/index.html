@@ -1,0 +1,109 @@
+<!--
+<!DOCTYPE html>         - Déclare le document comme HTML5
+<html lang="fr">        - Racine du document
+  <head>                - Métadonnées de la page (titre, encodage, CSS...)
+    <meta>              - Définition de l'encodage et du viewport
+    <title>             - Titre de la page dans l'onglet du navigateur
+    <link>              - Lien vers une feuille de style CSS externe
+  </head>
+  <body>                - Contient le contenu visible de la page
+    <header>            - Contenu introductif (titres, menus)
+    <main>              - Contenu principal de la page
+      <section>         - Section du contenu (titres, paragraphes)
+      <section>         - Autre section du contenu
+    </main>
+    <footer>            - Contient les informations de bas de page
+  </body>
+</html> 
+-->
+<!DOCTYPE html>
+<!-- La première ligne d'un fichier HTML est la déclaration du type de document (DOCTYPE).
+     Ici, on spécifie que le document est en HTML5. Cela informe le navigateur que le fichier respecte les standards HTML5. -->
+<html lang="fr">
+<!-- L'élément <html> est l'élément racine de la page HTML. Tout le contenu du document HTML se trouve à l'intérieur de cette balise.
+     L'attribut "lang" indique la langue du document. Ici, "fr" signifie que le contenu est en français. -->
+<head>
+    <!-- L'élément <head> contient des informations méta sur la page, c'est-à-dire des informations qui ne sont pas affichées directement à l'écran,
+         mais qui sont importantes pour les navigateurs et moteurs de recherche. -->
+
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> spécifie l'encodage des caractères. UTF-8 est l'encodage standard, utilisé pour représenter presque tous les caractères
+         du monde. Il est recommandé d'utiliser cet encodage pour garantir que les caractères spéciaux soient bien affichés. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- La balise <meta name="viewport"> permet à la page de s'adapter aux différents types d'écrans, comme les ordinateurs, tablettes et téléphones.
+         "width=device-width" signifie que la largeur de la page s'ajuste à la largeur de l'écran de l'utilisateur. "initial-scale=1.0" empêche un zoom initial. -->
+
+    <title>Structure de Base HTML</title>
+    <!-- La balise <title> définit le titre de la page qui apparaît dans l'onglet du navigateur. Ce titre est également important pour le référencement 
+         et pour donner un aperçu du contenu de la page aux moteurs de recherche. -->
+
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- La balise <link> permet de lier des fichiers externes, comme des feuilles de style CSS. 
+         Ici, nous lierons une feuille de style appelée "style.css" pour définir l'apparence visuelle de la page. -->
+</head>
+
+<body>
+    <!-- L'élément <body> contient tout le contenu visible de la page web, comme les titres, les paragraphes, les images, etc.
+         Tout ce qui est affiché dans le navigateur se trouve à l'intérieur de l'élément <body>. -->
+
+    <header>
+        <!-- L'élément <header> est utilisé pour regrouper le contenu d'en-tête de la page. Il contient souvent le titre principal, des logos, 
+             des barres de navigation ou des éléments similaires. -->
+        <h1>Cours sur la structure de base HTML</h1>
+        <!-- L'élément <h1> représente le titre principal de la page. Il ne doit y avoir qu'un seul <h1> par page pour indiquer le contenu principal
+             aux moteurs de recherche et aux lecteurs d'écran. -->
+    </header>
+
+    <main>
+        <!-- L'élément <main> contient le contenu principal de la page. Il ne doit pas y avoir d'éléments comme le menu, l'en-tête ou le pied de page
+             dans cet élément. Le contenu de <main> doit être unique à chaque page. -->
+
+        <section>
+            <!-- L'élément <section> est utilisé pour regrouper le contenu en sections distinctes. C'est un moyen logique de structurer la page.
+                 Chaque section peut avoir son propre sujet ou thème. -->
+            <h2>Les éléments fondamentaux d'une page HTML</h2>
+            <!-- L'élément <h2> représente un sous-titre. C'est un titre de deuxième niveau, généralement utilisé pour diviser le contenu d'un <h1>. -->
+
+            <p>
+                <!-- L'élément <p> est utilisé pour représenter un paragraphe de texte. Il est l'un des éléments les plus utilisés dans le contenu HTML. -->
+                Une page HTML est composée de plusieurs éléments, chacun ayant un rôle précis.
+                Voici une description des éléments clés que nous avons vus jusqu'ici :
+            </p>
+
+            <ul>
+                <!-- L'élément <ul> crée une liste à puces (unordered list). Chaque élément de la liste est représenté par <li>. -->
+                <li><strong>&lt;!DOCTYPE html&gt;</strong> : Indique que le document est en HTML5.</li>
+                <li><strong>&lt;html lang="fr"&gt;</strong> : Racine du document, avec l'attribut "lang" pour spécifier la langue du document.</li>
+                <li><strong>&lt;head&gt;</strong> : Contient les métadonnées, comme le titre, l'encodage, et les liens vers les fichiers externes.</li>
+                <li><strong>&lt;body&gt;</strong> : Contient tout le contenu visible de la page.</li>
+            </ul>
+        </section>
+
+        <section>
+            <!-- Une autre section pour ajouter du contenu structuré à la page. -->
+            <h2>Autres éléments importants</h2>
+            <p>
+                <!-- Encore un paragraphe pour expliquer davantage de concepts. -->
+                En plus des éléments de base, voici d'autres éléments fréquemment utilisés dans un document HTML :
+            </p>
+            <ul>
+                <!-- Une autre liste pour décrire des éléments HTML supplémentaires. -->
+                <li><strong>&lt;header&gt;</strong> : Section contenant les en-têtes de la page (titres, navigation, etc.).</li>
+                <li><strong>&lt;main&gt;</strong> : Section principale de la page, unique et centrée sur le contenu spécifique de la page.</li>
+                <li><strong>&lt;section&gt;</strong> : Permet de structurer le contenu en différentes parties logiques.</li>
+                <li><strong>&lt;footer&gt;</strong> : Section du bas de page, souvent utilisée pour les informations de contact ou les liens supplémentaires.</li>
+                <li><strong>&lt;link&gt;</strong> : Permet de lier des fichiers externes, comme des feuilles de style CSS ou des polices.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <!-- L'élément <footer> est utilisé pour regrouper le contenu de pied de page. 
+             Cela inclut généralement les informations sur le site, les droits d'auteur, les informations de contact, ou d'autres liens utiles. -->
+        <p>&copy; 2024 Mon Site Web - Tous droits réservés.</p>
+        <!-- L'élément <p> représente un paragraphe dans le pied de page. Ici, on l'utilise pour afficher les droits d'auteur. -->
+    </footer>
+
+</body>
+</html>

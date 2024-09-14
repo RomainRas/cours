@@ -1,0 +1,104 @@
+/* 
+Style de base pour la page. 
+Les propriétés "margin" et "padding" sont définies pour le body, 
+et une couleur de fond claire est appliquée pour faciliter la lecture.
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+    padding: 20px; /* Ajoute un padding global autour du contenu */
+    background-color: #f9f9f9; /* Couleur de fond gris clair */
+    line-height: 1.6; /* Espacement vertical entre les lignes */
+}
+
+/* 
+Styles pour les titres (h1, h2).
+Les titres ont un fond sombre, un texte blanc et des coins arrondis pour un meilleur contraste visuel.
+*/
+h1, h2 {
+    background-color: #333; /* Fond gris foncé */
+    color: white; /* Texte en blanc pour contraste */
+    padding: 10px;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* 
+Classe de conteneur pour les exemples.
+Cette classe applique un espace en bas de chaque section pour mieux espacer les exemples.
+*/
+.example-container {
+    margin-bottom: 40px; /* Ajoute une marge en bas de chaque exemple */
+}
+
+/* 
+Classe de base pour les boîtes d'exemple.
+Ces boîtes ont un texte centré, une taille de police standard et un positionnement relatif.
+Le texte est aussi légèrement espacé de la bordure avec un padding interne.
+*/
+.box {
+    text-align: center; /* Centre le texte dans la boîte */
+    font-size: 18px;
+    color: #333; /* Couleur du texte */
+    position: relative; /* Position relative pour un positionnement interne */
+}
+
+/* ----------------- */
+/* Exemple : Margin */
+/* ----------------- */
+
+/* 
+La propriété margin crée de l'espace autour de l'élément, en dehors de ses bordures.
+Dans cet exemple, une marge de 20px est appliquée autour de la boîte.
+Le fond du body est visible à travers la marge, car cet espace est transparent.
+*/
+.example-margin {
+    margin: 20px; /* Crée un espace extérieur de 20px autour de la boîte */
+    background-color: #f4a261; /* Couleur de fond de la boîte pour visualiser la marge */
+    padding: 10px; /* Padding interne pour espacer le contenu du bord */
+    border: 2px solid #e76f51; /* Bordure de 2px pour bien délimiter la boîte */
+}
+
+/* ----------------- */
+/* Exemple : Border */
+/* ----------------- */
+
+/* 
+La propriété border ajoute une bordure autour de l'élément. 
+Dans cet exemple, on applique une bordure solide de 5px de couleur bleue.
+La bordure fait partie de l'élément et influence sa taille totale.
+*/
+.example-border {
+    background-color: #2a9d8f; /* Couleur de fond verte pour l'élément */
+    padding: 10px; /* Espace intérieur entre le contenu et la bordure */
+    border: 5px solid #264653; /* Bordure solide bleue de 5px */
+}
+
+/* ----------------- */
+/* Exemple : Padding */
+/* ----------------- */
+
+/* 
+La propriété padding crée un espace entre le contenu de l'élément (texte) et la bordure.
+Le padding est coloré avec le fond de l'élément, contrairement à la marge qui est transparente.
+*/
+.example-padding {
+    padding: 20px; /* Espace intérieur de 20px entre le texte et la bordure */
+    background-color: #e9c46a; /* Couleur de fond pour illustrer le padding */
+    border: 2px solid #f4a261; /* Bordure pour bien délimiter l'élément */
+}
+
+/* ----------------- */
+/* Exemple combiné */
+/* ----------------- */
+
+/* 
+Exemple combinant margin, border et padding.
+On applique ici une marge de 30px (espace extérieur), 
+une bordure de 3px en pointillés rouges, et un padding de 15px (espace intérieur).
+*/
+.example-combined {
+    margin: 30px; /* Espace extérieur (marge) de 30px */
+    padding: 15px; /* Espace intérieur (padding) de 15px */
+    border: 3px dashed red; /* Bordure en pointillés rouges de 3px */
+    background-color: #ffb703; /* Couleur de fond pour la boîte */
+}

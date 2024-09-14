@@ -1,0 +1,66 @@
+/* 
+    Style général pour le corps de la page. 
+    Une police lisible (Arial), avec une couleur de fond gris clair pour un confort visuel.
+*/
+body {
+    font-family: Arial, sans-serif; /* Utilisation de la police Arial */
+    background-color: #f4f4f4; /* Fond gris clair */
+    margin: 0; /* Suppression des marges par défaut du navigateur */
+    padding: 20px; /* Ajout de padding autour du contenu */
+    color: #333; /* Couleur principale du texte en gris foncé */
+}
+
+/* 
+    Style pour le titre principal <h1> et les titres de section <h2>. 
+    Couleur sombre et espacement ajouté pour améliorer la lisibilité.
+*/
+h1, h2 {
+    color: #333; /* Texte en gris foncé */
+    padding: 10px 0; /* Espacement vertical autour des titres */
+}
+
+/* 
+    Style pour les sous-titres <h3>. 
+    Couleur bleu foncé pour les différencier des autres titres.
+*/
+h3 {
+    color: #007BFF; /* Bleu foncé */
+}
+
+/* 
+    Style pour les paragraphes <p>. 
+    Ajout d'espacement pour améliorer la lisibilité entre les sections.
+*/
+p {
+    margin-bottom: 20px; /* Espace sous chaque paragraphe */
+}
+
+/* 
+    Style pour les listes <ul>. 
+    Chaque liste est stylisée avec un espacement entre les éléments.
+*/
+ul {
+    padding-left: 20px; /* Ajoute une indentation à gauche pour les puces */
+    margin-bottom: 20px; /* Espace sous les listes */
+}
+
+/* 
+    Style pour les liens <a>. 
+    Un lien devient bleu foncé avec un soulignement lors du survol.
+*/
+a {
+    color: #007BFF; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Suppression du soulignement par défaut */
+}
+
+a:hover {
+    text-decoration: underline; /* Ajout d'un soulignement lors du survol */
+}
+
+/* 
+    Style pour les sections.
+    Chaque section est bien espacée pour une meilleure organisation visuelle.
+*/
+section {
+    margin-bottom: 40px; /* Espace sous chaque section pour les séparer visuellement */
+}

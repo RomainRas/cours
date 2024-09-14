@@ -1,0 +1,150 @@
+/* 
+Style de base pour le body :
+- Utilisation de la police Arial pour garantir une lisibilité simple.
+- Le fond est légèrement gris pour rendre la lecture plus confortable.
+- Les marges et paddings sont utilisés pour aérer le contenu.
+*/
+body {
+    font-family: Arial, sans-serif; /* Police simple et lisible */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 20px; /* Padding pour espacer le contenu des bords */
+    background-color: #f4f4f4; /* Fond gris clair pour le confort visuel */
+    line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+    color: #333; /* Couleur principale du texte */
+}
+
+/* 
+Style pour les titres principaux et secondaires :
+- Les titres sont en fond sombre avec un texte blanc pour contraster fortement.
+- Les coins arrondis (border-radius) rendent les titres visuellement plus attrayants.
+*/
+h1, h2 {
+    background-color: #333; /* Fond sombre pour les titres */
+    color: white; /* Texte blanc pour contraste élevé */
+    padding: 10px; /* Padding interne pour espacer le texte des bords */
+    border-radius: 5px; /* Coins arrondis pour un effet moderne */
+}
+
+/* Style pour espacer les sections */
+section {
+    margin-bottom: 40px; /* Espace entre chaque section */
+}
+
+/* ----------------- */
+/* Exemple : display block */
+/* ----------------- */
+
+/* 
+Les éléments block prennent toute la largeur disponible, 
+et chaque élément commence sur une nouvelle ligne. Ils s'affichent l'un en dessous de l'autre.
+*/
+.block-item {
+    display: block; /* Comportement block */
+    background-color: #007BFF; /* Fond bleu pour visibilité */
+    color: white; /* Texte blanc pour contraste */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 10px; /* Espace entre les éléments */
+}
+
+/* ----------------- */
+/* Exemple : display inline */
+/* ----------------- */
+
+/* 
+Les éléments inline prennent seulement la largeur nécessaire à leur contenu, 
+et ils ne commencent pas sur une nouvelle ligne. Ils restent dans le flux du texte.
+*/
+.inline-item {
+    display: inline; /* Comportement inline */
+    background-color: #28A745; /* Fond vert pour visibilité */
+    color: white; /* Texte blanc */
+    padding: 5px 10px; /* Padding interne pour espacer le texte */
+    margin-right: 10px; /* Espace entre les éléments inline */
+}
+
+/* ----------------- */
+/* Exemple : display inline-block */
+/* ----------------- */
+
+/* 
+Les éléments inline-block se comportent comme des éléments inline, 
+mais respectent la hauteur et la largeur définies, ce qui les rend plus flexibles.
+*/
+.inline-block-item {
+    display: inline-block; /* Comportement inline-block */
+    background-color: #FFC107; /* Fond jaune pour visibilité */
+    color: white; /* Texte blanc */
+    padding: 10px; /* Espacement interne */
+    margin-right: 10px; /* Espace entre les éléments inline-block */
+    width: 150px; /* Largeur fixe */
+    height: 50px; /* Hauteur fixe */
+}
+
+/* ----------------- */
+/* Exemple : display none */
+/* ----------------- */
+
+/* 
+Les éléments avec display: none sont totalement retirés de la mise en page, 
+ils n'occupent aucun espace et ne sont pas visibles.
+*/
+.none-item {
+    background-color: #17A2B8; /* Fond bleu clair */
+    color: white; /* Texte blanc */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 10px; /* Espace sous les éléments */
+}
+
+/* Cet élément est caché grâce à display: none */
+.hidden {
+    display: none; /* Masque complètement l'élément */
+}
+
+/* ----------------- */
+/* Exemple : display grid */
+/* ----------------- */
+
+/* 
+Display grid permet de diviser l'espace en plusieurs cellules définies par des colonnes et des lignes.
+*/
+.grid-example {
+    display: grid; /* Comportement de grille */
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes de taille égale */
+    gap: 10px; /* Espacement entre les cellules */
+}
+
+.grid-item {
+    background-color: #DC3545; /* Fond rouge pour visibilité */
+    color: white; /* Texte blanc */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Texte centré */
+}
+
+/* ----------------- */
+/* Exemple : display table */
+/* ----------------- */
+
+/* 
+Display: table imite le comportement d'un tableau HTML. 
+Les éléments enfants se comportent comme des lignes et des cellules de tableau.
+*/
+.table-example {
+    display: table; /* Comportement de tableau */
+    width: 100%; /* Prend toute la largeur disponible */
+    border-collapse: collapse; /* Fusionne les bordures */
+}
+
+/* Chaque ligne de la table */
+.table-row {
+    display: table-row; /* Comportement de ligne de tableau */
+}
+
+/* Chaque cellule de la table */
+.table-cell {
+    display: table-cell; /* Comportement de cellule de tableau */
+    padding: 10px; /* Padding interne */
+    border: 1px solid #000; /* Bordure noire autour des cellules */
+    background-color: #6C757D; /* Fond gris foncé */
+    color: white; /* Texte blanc */
+    text-align: center; /* Texte centré dans la cellule */
+}
