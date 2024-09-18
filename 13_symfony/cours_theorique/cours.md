@@ -4,7 +4,23 @@
     templates/home_page/index.html.twig
     
 # Creation de la base de données
-## Creation d'une entité(table)
+
+## Configuration on du fichier .env   
+*Symfony utilise un fichier .env pour stocker les informations de configuration, y compris celles liées à la base de données. Ouvrez le fichier .env à la racine de votre projet et configurez les informations de connexion à votre base de données :*
+- Ligne 28 : DATABASE_URL="mysql://user:password@127.0.0.1:3306/db_name";
+    - User : Remplacer par votre nom d'utilisateur MySQL
+    - password : Remplacer par votre mot de passe MySQL
+    - 127.0.0.1:3306 : adresse de votre serveur de base de données
+    - db_name : Nom de votre base de données
+
+### Creation de la base de donées
+*Symfony fournit une commade pour créer la base de données defini dans la configuration*
+- Ouvrir le serveur symfony serveur:start
+- Executer la commande suivante dans le terminal : ```` symfony console doctrine:database:create ````
+  <symfony console doctrine:database:create>
+  Cela créera la base de données si elle n'existe pas encore
+
+#### Creation d'une entité(table)
 *Generer une entité (table) ou mettre à jour une existante* 
 *Generer une entité dans symfony correspond à une table dans la bdd.*
 - Executer la commande suivante dans le terminal  ````symfony console make:entity ````
@@ -30,21 +46,6 @@
         > no
     - Ajouter d'autres proprieté
         > enter pour non / sinon inserrer le nom de la nouvelle proprieté
-
-### Configuration on du fichier .env   
-*Symfony utilise un fichier .env pour stocker les informations de configuration, y compris celles liées à la base de données. Ouvrez le fichier .env à la racine de votre projet et configurez les informations de connexion à votre base de données :*
-- Ligne 28 : DATABASE_URL="mysql://user:password@127.0.0.1:3306/db_name";
-    - User : Remplacer par votre nom d'utilisateur MySQL
-    - password : Remplacer par votre mot de passe MySQL
-    - 127.0.0.1:3306 : adresse de votre serveur de base de données
-    - db_name : Nom de votre base de données
-
-#### Creation de la base de donées
-*Symfony fournit une commade pour créer la base de données defini dans la configuration*
-- Ouvrir le serveur symfony serveur:start
-- Executer la commande suivante dans le terminal : ```` symfony console doctrine:database:create ````
-  <symfony console doctrine:database:create>
-  Cela créera la base de données si elle n'existe pas encore
 
 ##### Generation et execution de la migration
 
@@ -160,3 +161,7 @@ En SQL, cela se traduit par une commande DELETE.
 
 qu'est ce qu'un repository qui se créer en meme temps que l'on créer l'entité
     Logique du repository non compris
+
+c'est quoi les 
+composer require --dev symfony/maker-bundle
+c'est quoi les Deprecations 1
