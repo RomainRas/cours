@@ -162,6 +162,15 @@ En SQL, cela se traduit par une commande DELETE.
 qu'est ce qu'un repository qui se créer en meme temps que l'on créer l'entité
     Logique du repository non compris
 
+utiliser git pour gerer les retour en arriere 
 c'est quoi les 
+peux on créer la bdd et ensuite les entitées
 composer require --dev symfony/maker-bundle
+pouvons nous github le projet a coté voir github en cours comment s'en servir pour bien bosser
 c'est quoi les Deprecations 1
+Ou changer le texte de la page d'acceuille index
+brand controller 4 et 5 pas compris l'odre
+
+
+pourquoi le html n'a pas d'auto complession dans le twig ?
+faire le dd dans le controller
